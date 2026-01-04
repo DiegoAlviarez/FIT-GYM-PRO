@@ -1,8 +1,16 @@
+
+<!-- Llamado a la plantilla que se está usando -->
 <?= $this->extend('layouts\plantilla') ?>
+
+<!-- Título de la página -->
 <?= $this->section('titulo') ?>
     <title>FitGymPro - Instalaciones</title>
 <?= $this->endSection() ?>
+
+<!-- Contenido de la página-->
 <?= $this->section('contenido') ?>
+
+    <!-- Descripción de las zonas del gimnasio -->
     <h1 class="titulo"> Nuestras Instalaciones</h1>
     <p class="texto">Tecnología de punta y espacios diseñados para maximizar tu rendimiento</p>
     <section class="grupo">
@@ -114,6 +122,8 @@
         </div>
     </section>
     <?= $this->endSection() ?>
+
+    <!-- Scripts usados en la página -->
     <?= $this->section('script') ?>
         <script src="op1.js"></script>
     <?= $this->endSection() ?>

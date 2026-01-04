@@ -1,7 +1,12 @@
+<!-- Llamado a la plantilla que se está usando -->
 <?=  $this->extend('layouts\plantilla') ?>
+
+<!-- Información cambiante de la plantilla -->
 <?= $this->section('titulo') ?>
     <title>FitGymPro</title>
 <?= $this->endSection() ?>
+
+<!-- Información cambiante de la plantilla -->
 <?= $this->section('contenido') ?>
 
     <div class="decoracion-transparent">
@@ -27,6 +32,8 @@
             <p>Acceso</p>
         </div>
     </div>
+
+    <!-- Buscador de Membresías -->
     <section class="centrado1">
         <h1 class="titulo-consulta">Consulta de Membresía</h1>
         <p class="parrafo-consulta"> Ingresa tu id de usuario para consultar tu información y estado de membresía</p>
@@ -38,6 +45,8 @@
             </button>
         </div>
     </section>
+
+    <!-- La respuesta del buscador -->
     <div class="resultado" id="resultado">
         <div class="encabezado">
             <div class="info-usuario">
@@ -82,6 +91,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Mensaje de error del buscador -->
     <div class="mensaje-error" id="mensaje_error">
         <div class="">
             <i class="fa-regular fa-circle-xmark"></i>
@@ -91,6 +102,8 @@
         </p>
     </div>
 <?= $this->endSection() ?>
+
+<!-- Información cambiante de la plantilla -->
 <?= $this->section('script') ?>
     <script src="<?= base_url('js/login.js')?>" ></script>
     <script src="<?= base_url('js/buscador.js') ?>"></script>

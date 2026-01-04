@@ -1,9 +1,15 @@
+
+<!-- Plantilla que contiene el nav y el footer que se va a usar en todo el proyecto -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Sección que se puede cambiar cuando se use la plantilla -->
     <?= $this->renderSection('titulo') ?>
+
+    <!-- Enlace con los estilos e iconos que se van a usar -->
     <link href="<?= base_url('estilos/estilo.css') ?>" rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
     <script src="https://kit.fontawesome.com/00a1f99971.js" crossorigin="anonymous"></script>
@@ -28,7 +34,10 @@
                 <a href="<?= base_url('promociones') ?>" id="op3"> Promociones </a>
             </div>
         </nav>
+
+        <!-- Sección que se puede cambiar -->
         <?= $this->renderSection('contenido') ?>
+
         <footer>
             <div class="footer-contenedor">
                 <div class="footer-columna">
@@ -66,6 +75,9 @@
         </footer>
     </div>
     <script src="<?= base_url('js/click.js') ?>"></script>
+
+    <!-- Sección que se puede cambiar-->
     <?= $this->renderSection('script') ?>
+
 </body>
 </html>

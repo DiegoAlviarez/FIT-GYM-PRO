@@ -1,9 +1,15 @@
+<!-- Llamado a la plantilla que se está usando -->
 <?= $this->extend('layouts\plantilla') ?>
+
+<!-- Título de la página -->
 <?= $this->section('titulo') ?>
     <title> FitGymPro - Instructores </title>
 <?= $this->endSection() ?>
+
+<!-- Contenido de la página -->
 <?=  $this->section('contenido') ?>
     
+    <!-- Descripción de los entrenadores del gimnasio-->
     <h1 class="titulo"> Nuestros Instructores</h1>
     <p class="texto">Profesionales certificados dedicados a ayudarte a alcanzar tus objetivos</p>
 
@@ -118,6 +124,8 @@
             </div>
         </div>
     </section>
+
+    <!--Botón para reservar sesión de entrenamiento -->
     <div class="contenedor-transparente">
         <div class="centrado">
             <h3>¿Quieres entrenar con nuestros expertos?</h3>
@@ -126,6 +134,8 @@
         </div>
     </div>
 <?= $this->endSection() ?>
+
+<!-- Script usado en la página -->
 <?= $this->Section('scripts') ?>
     <script src="op2.js"></script>
 <?= $this->endSection() ?>

@@ -1,9 +1,15 @@
+<!-- Llamado a la plantilla que se está usando -->
 <?= $this->extend('layouts\plantilla') ?>
+
+<!-- Título de la página -->
 <?=  $this->section('titulo') ?>
     <title>FitGymPro - Proociones </title>
 <?= $this->endSection() ?>
+
+<!-- Contenido de la página -->
 <?= $this->section('contenido') ?>
     
+<!-- Promociones activas del gimnasio -->
     <div class="decoracion-transparent">
         <p>
             <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -114,6 +120,7 @@
         </div>
     </section>
 
+<!-- Botón para contactar con un asesor-->
     <div class="contenedor-transparente">
         <div class="centrado">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -123,6 +130,8 @@
         </div>
     </div>
 <?= $this->endSection() ?>
+
+<!-- Script usado en la página -->
 <?= $this->section('script') ?>
     <script src="op3.js"></script>    
 <?= $this->endSection() ?>

@@ -1,18 +1,41 @@
+<!-- Llamado a la plantilla que se está usando -->
 <?= $this->extend('layouts\plantilla') ?>
+
+<!-- Título de la página -->
 <?= $this->section('titulo') ?>
     <title>Editar Usuario Principal</title>
 <?= $this->endSection() ?>
+
+<!-- Contenido de la página -->
 <?= $this->section('contenido') ?>
     
+<!-- Vista de edición del usuario cuando es principal -->
     <div id="content-reg" class="content">
         <h2>Editar Usuario</h2>
         <form method="POST" action="<?= base_url('usuarios/actualizar') ?>" autocomplete="off">
 
+            <!-- Token de seguridad -->
             <?= csrf_field(); ?>
-
+    
+            <!-- Se manda el id oculto solo al backend -->
             <input type="hidden" name="id_persona" value="<?= esc($persona['id_persona']) ?>">
             <input type="hidden" name="rol" value="principal">
 
+            <!-- Mensaje de éxito -->
+            <?php if(session()->getFlashdata('mensaje')): ?>
+                <div class="alerta alerta-exito">
+                    <?= session()->getFlashdata('mensaje') ?>
+                </div>
+            <?php endif; ?>
+
+            <!-- Mensaje de error -->
+            <?php if(session()->getFlashdata('error')): ?>
+                <div class="alerta alerta-error">
+                    <?= session()->getFlashdata('error') ?>
+                </div>
+            <?php endif; ?>
+
+            <!--Campos que se deben actualizar -->
             <div class="cuerpo2">
                 <div class="campo2">
                     <label for="nombre">Nombre Completo</label>
@@ -50,6 +73,8 @@
                         </optgroup>
                     </select>
                 </div>
+
+                <!-- Los beneficiarios solo aparecen si el caso aplica -->
                 <div class="beneficiario" id="bnf2">
                     <h3>Beneficiario 2</h3>
                     <input type="hidden" name="beneficiarios[0][id]" value="<?= $beneficiarios[0]['id_persona'] ?? '' ?>">
@@ -85,6 +110,8 @@
                     <label for="duracion">Duración</label>
                     <input type="text" id="duracion" name="duracion" value="<?= esc($membresia['duracion']) ?>" >
                 </div>
+
+                <!-- Botones para guardar cambios o regresar -->
                 <div class="rgtr-edit">
                     <input class="btns-editar" type="submit" value="Guardar Cambios"/>
                     <a href="<?= base_url('gestion') ?>" class="btns-editar" onclick="return confirm('¿Seguro que desea retroceder? No se guardaran los cambios')"> Regresar </a>
@@ -93,6 +120,8 @@
         </form>
     </div>
 <?= $this->endSection() ?>
+
+<!-- Script usado en la página -->
 <?= $this->section('script') ?>
     <script src="<?= base_url('js/formulario.js') ?>"></script>
 <?= $this->endSection() ?>
