@@ -28,7 +28,7 @@
         </div>
         <div class="tarjeta-instructores">
             <figure>
-                <img src="<?= base_url('imágenes/instructor2.jpg') ?>" alt="gym-instructor2">
+                <img src="<?= base_url('imagenes/instructor2.jpg') ?>" alt="gym-instructor2">
             </figure>
             <div class="info">
                 <h2>Miguel Ángel Torres</h2>
@@ -46,7 +46,7 @@
         </div>
         <div class="tarjeta-instructores">
             <figure>
-                <img src="<?= base_url('imágenes/instructor3.jpg') ?>" alt="gym-instructor3">
+                <img src="<?= base_url('imagenes/instructor3.jpg') ?>" alt="gym-instructor3">
             </figure>
             <div class="info">
                 <h2>Laura Martín</h2>
@@ -66,7 +66,7 @@
     <section class="grupo">
         <div class="tarjeta-instructores">
             <figure>
-                <img src="<?= base_url('imágenes/instructor4.jpg') ?>" alt="gym-instructor4">
+                <img src="<?= base_url('imagenes/instructor4.jpg') ?>" alt="gym-instructor4">
             </figure>
             <div class="info">
                 <h2>David Sánchez</h2>
@@ -83,7 +83,7 @@
         </div>
         <div class="tarjeta-instructores">
             <figure>
-                <img src="<?= base_url('imágenes/instructor5.jpg') ?>" alt="gym-instructor5">
+                <img src="<?= base_url('imagenes/instructor5.jpg') ?>" alt="gym-instructor5">
             </figure>
             <div class="info">
                 <h2>Carmen López</h2>
@@ -101,7 +101,7 @@
         </div>
         <div class="tarjeta-instructores">
             <figure>
-                <img src="<?= base_url('imágenes/instructor6.jpg') ?>" alt="gym-instructor6">
+                <img src="<?= base_url('imagenes/instructor6.jpg') ?>" alt="gym-instructor6">
             </figure>
             <div class="info">
                 <h2>Roberto García</h2>
