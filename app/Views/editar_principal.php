@@ -42,6 +42,10 @@
                     <input type="text" name="nombre" value="<?= esc($persona['nombre']) ?>" id="nombre" required>
                 </div>
                 <div class="campo2">
+                    <label for="cedula">Cédula</label>
+                    <input type="text" name="cedula" value="<?= esc($persona['cedula']) ?>" id="cedula" required>
+                </div>
+                <div class="campo2">
                     <label for="estado">Estado de la Membresía</label>
                     <select id="estado" name="estado">
                         <option value="Activa" <?= $membresia['estado']=='Activa'?'selected':'' ?>>Activa</option>

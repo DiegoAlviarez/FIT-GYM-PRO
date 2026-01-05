@@ -43,7 +43,10 @@
                     <label for="nombre">Nombre Completo</label>
                     <input type="text" name="nombre" value="<?= esc($persona['nombre']) ?>" id="nombre" required>
                 </div>
-
+                <div class="campo2">
+                    <label for="cedula">Cédula</label>
+                    <input type="text" name="cedula" value="<?= esc($persona['cedula']) ?>" id="cedula" required>
+                </div>
                 <div class="campo2">
                     <label for="email">Correo Electrónico</label>
                     <input type="email" name="email" id="email" value="<?= esc($persona['email']) ?>" required>

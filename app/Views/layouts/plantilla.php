@@ -18,11 +18,11 @@
 <body>
     <div class="padre">
         <nav>
-            <div class="horizontal">
-                <div  >
+            <div class="logo">
+                <div >
                     <img src="<?= base_url('imagenes/imagen1.png') ?>" onclick="contadorClick()" alt="FitGymPro" width="50" title="FitGymPro">
                 </div>
-                <div class="prueba" >
+                <div class="text-logo" >
                     <span class="a">FitGymPro</span>
                     <span class="b">Gestión Inteligente</span>
                 </div>

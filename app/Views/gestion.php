@@ -49,16 +49,20 @@
             <!-- Campos para llenar -->
                 <div class="cuerpo2">
                     <div class="campo2">
-                        <label for="reg-usuario">Nombre Completo</label>
-                        <input type="text" placeholder="Juan Pérez" name="reg-usuario" id="reg-usuario" required>
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" placeholder="Juan Pérez" name="nombre" id="usuario" required>
                     </div>
                     <div class="campo2">
-                        <label for="reg-email">Correo Electrónico</label>
-                        <input type="email" placeholder="juan@email.com" name="reg-email" id="reg-email" required>
+                        <label for="cedula">Cédula</label>
+                        <input type="text" placeholder="V-12345678" name="cedula" id="cedula" required>
                     </div>
                     <div class="campo2">
-                        <label for="reg-telefono">Teléfono</label>
-                        <input type="tel" placeholder="+58 412 248-5263" name="reg-telefono" id="reg-telefono" required>
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" placeholder="juan@email.com" name="email" id="email" required>
+                    </div>
+                    <div class="campo2">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" placeholder="+58 412 248-5263" name="telefono" id="telefono" required>
                     </div>
                     <div class="campo2">
                         <label for="tipo_membresia">Tipo de Membresía:</label>
@@ -69,8 +73,8 @@
                             <optgroup label="Membresías Estándar">
                                 <option value="mensual">Mensualidad Básica</option>
                                 <option value="trimestral">Plan Trimestral</option>
-                                <option value="Semestral">Plan Semestral</option>
-                                <option value="Anual">Anualidad Regular</option>
+                                <option value="semestral">Plan Semestral</option>
+                                <option value="anual">Anualidad Regular</option>
                             </optgroup>
                             <optgroup label="Promociones Activas">
                                 <option value="2x1">Promo 2x1 en membresías</option>
@@ -107,12 +111,12 @@
                         </div>
                     </div>
                     <div class="campo2">
-                        <label for="fecha">Fecha de Inicio</label>
-                        <input type="date" id="fecha" name="fecha" required>
+                        <label for="fecha_inicio">Fecha de Inicio</label>
+                        <input type="date" id="fecha_inicioS" name="fecha_inicio" required>
                     </div>
                     <div class="campo2">
-                        <label for="tiempo">Duración</label>
-                        <input type="text" id="tiempo" placeholder="Tiempo de Membresía" name="tiempo" required>
+                        <label for="duracion">Duración</label>
+                        <input type="text" id="duracion" placeholder="Tiempo de Membresía" name="duracion" required>
                     </div>
                     <div class="alertas"> </div>
                     <div class="rgtr">

@@ -38,7 +38,7 @@
         <h1 class="titulo-consulta">Consulta de Membresía</h1>
         <p class="parrafo-consulta"> Ingresa tu id de usuario para consultar tu información y estado de membresía</p>
         <div class="contenedor-buscador">
-            <input type="text" id="buscar" placeholder="Ingresa tu ID de usuario (ej: 001, 002, 003)">
+            <input type="text" id="buscar" placeholder="Ingresa tu número de cédula (ej: 12345678)">
             <button onclick="buscarUsuario()" class="btn-buscar"> 
                 <span class="material-symbols-outlined">search</span>
                 Buscar 
@@ -53,7 +53,7 @@
                 <img class="foto-usuario" id ="foto-usuario" alt="foto-perfil" title="perfil">
                 <div class="datos-principales">
                     <h2 id="nombre-usuario"></h2>
-                    <p>ID: <span id="id-usuario"></span></p>
+                    <p>Cédula: <span id="cedula-usuario"></span></p>
                 </div>
             </div>
             <div class="estado" id="estado">

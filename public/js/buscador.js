@@ -2,7 +2,7 @@
 const resultado = document.getElementById("resultado");
 const mensajeError = document.getElementById("mensaje_error");
 const nombreUsuario = document.getElementById("nombre-usuario");
-const idUsuario = document.getElementById("id-usuario");
+const cedulaUsuario = document.getElementById("cedula-usuario");
 const emailUsuario = document.getElementById("email-usuario");
 const telefonoUsuario = document.getElementById("telefono-usuario");
 const membresiaUsuario = document.getElementById("membresia-usuario");
@@ -19,7 +19,7 @@ mensajeError.style.display = "none";
 
 function buscarUsuario() {
     // Obtiene el valor del input 
-    const idBuscado = document.getElementById("buscar").value.trim();
+    const cedulaBuscada = document.getElementById("buscar").value.trim();
 
     // Si el input está vacío no hace nada 
     if (idBuscado === ""){
@@ -27,7 +27,7 @@ function buscarUsuario() {
     }
 
     // Realiza una petición al backend con el fecth
-    let url = `${BASE_URL}/consultar-membresia/${idBuscado}`;
+    let url = `${BASE_URL}/consultar-membresia/${cedulaBuscada}`;
     fetch(url)
 
         //Respuesta del servidor en formato json
