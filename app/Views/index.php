@@ -94,11 +94,11 @@
 
     <!-- Mensaje de error del buscador -->
     <div class="mensaje-error" id="mensaje_error">
-        <div class="">
+        <div>
             <i class="fa-regular fa-circle-xmark"></i>
         </div>
         <p>
-            El ID ingresado no existe en el sistema. Por favor, verifica e intenta nuevamente.
+            La cédula ingresada no existe en el sistema. Por favor, verifica e intenta nuevamente.
         </p>
     </div>
 <?= $this->endSection() ?>

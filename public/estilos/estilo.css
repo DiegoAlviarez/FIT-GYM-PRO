@@ -321,7 +321,7 @@ footer{
 .tarjeta ul{
     padding-left: 20px;
 }
-/* Colores individuales para ñas tarjetas con su efecto hover*/
+/* Colores individuales para las tarjetas con su efecto hover*/
 .azul{
 background-color: #00C6FF;
 }
@@ -420,12 +420,7 @@ h2{
 .tarjeta2:hover img{
     transform: scale(1.2);
 }
-/*Contenedor de los intructores*/
-.instructores-grupo{
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-}
+
 /*Estilo del contenedor*/
 .tarjeta-instructores{
     background-color: rgba(5, 4, 49, 0.37);
@@ -535,55 +530,23 @@ h4{
     color:   #93ddfa;
     font-size: 0.9em;
 }
-
+/*Iconos dentro de un botón*/
 .centrado i{
     color: #00eaff;
     font-size: 1.8em;
 }
-
-.tarjeta-promociones{
-    border-radius: 15px;
-    justify-content: center;
-    padding: 30px;
-    width: 400px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; 
-}
-.fondo-azul{
-    background-color: rgba(7, 9, 78, 0.342);
-    border: 1px solid rgba(0, 234, 255, 0.507);
-}
-.fondo-negro{
-    background-color: rgba(7, 1, 1, 0.459);
-    border: 1px solid rgba(7, 0, 0, 0.507);
-}
-.fondo-anaranjado{
-    background-color: rgba(247, 133, 39, 0.267);
-    border: 1px solid rgba(247, 133, 39, 0.507);
-}
-.fondo-verde{
-    background-color:  rgba(72, 150, 75, 0.548);
-    border: 1px solid rgba(72, 150, 75, 0.507);;
-}
-.fondo-morado{
-    background-color: #a042c541;
-    border: 1px solid #a042c5;
-}
-.fondo-amarillo{
-   background-color: rgba(211, 212, 105, 0.473);
-   border: 1px solid #e4e682;
-}
+/*Información sobre los descuentos*/
 .descuento{
     color: #b3b3cc;
     font-family: "Montserrat", sans-serif;
     font-size: 0.9em;
 }
+/*Elementos dentro de la tarjeta*/
 .contenido{
     display: flex;
     flex-direction: column;
 }
+/*Botón en la tarjeta*/
 .contenido a{
     width: 100%;
     max-width: 90%;
@@ -596,6 +559,7 @@ h4{
     padding-left: 20px;
     text-decoration: none;
 }
+/*Colores de los botones en cada tarjeta*/
 .btn-azul{
     background:#00C6FF;
 }
@@ -632,17 +596,20 @@ h4{
 .btn-amarillo:hover{
     background-color: #dddf68bd;
 }
+/*Información de ahorro*/
 .ahorro{
     font-size: 0.9em;
     margin: 0;
     color: #64da6a;
 }
+/*Tiempo válido de la promoción*/
 .validez{
     font-size: 0.8em;
     color: #09c2d3;
     margin-top: 25px;
     font-family:"Roboto", sans-serif;;
 }
+/*Precio con descuento*/
 .pvp-actual{
     font-size: 1.5em;
     font-weight: bold;
@@ -651,11 +618,13 @@ h4{
     background-clip: text;
     color: transparent;
 }
+/*Precio sin descuento*/
 .pvp-anterior{
     text-decoration: line-through;
     color: #acb6be;
     font-size: 1em;
 }
+/*Contenedor de la información del usuario cuando  */
 .resultado{
     flex-direction: column;   
     max-width: 60%; 
@@ -671,6 +640,7 @@ h4{
     font-family: "Montserrat", sans-serif;
     font-size: 1em ;
 }
+/*Contenedor de la información personal del usuario*/
 .encabezado{
     display: flex;
     justify-content: space-between;
@@ -688,6 +658,7 @@ h4{
     flex-direction: column;
     gap: 5px;
 }
+/*Contenedor del elemento activo*/
 .estado{
     padding: 6px 14px;
     border-radius: 20px;
@@ -697,14 +668,17 @@ h4{
     gap: 6px;
     font-weight: 500;
 }
+/*Cuando el elemento se encuentra activo*/
 .estado.activa{
     background-color: rgba(46, 204, 113, 0.15);
     color: #2ecc71;
 }
+/*Cuando el elemento se encuentra expirado*/
 .estado.expirada{
     background-color: rgba(231, 76, 60, 0.15);
     color: #e74c3c;
 }
+/*Imagen del usuario*/
 .foto-usuario{
     width: 100px;
     height: 100px;
@@ -713,6 +687,7 @@ h4{
     border: 1px solid #000;
     box-shadow: 0px 0px 20px  rgba(3, 14, 15, 0.582);
 }
+/*Datos de la membresía*/
 .cuerpo{
     display: flex;
     flex-wrap: wrap;
@@ -720,6 +695,7 @@ h4{
     row-gap: 20px;
     column-gap: 10px;
 }
+/*Contiene cada información a mostrar*/
 .dato{
     display: flex;
     align-items: center;
@@ -730,10 +706,12 @@ h4{
     width: 49%;
     box-sizing: border-box;
 }
+/*Iconos en la membresía*/
 .dato i{
     font-size: 1.4em;
     color: #00eafff5;
 }
+/*Contenedor del error cuando se introduce una cédula incorrecta*/
 .mensaje-error{
     background-color: rgba(4, 5, 22, 0.432);
     margin: 20px auto;
@@ -746,12 +724,14 @@ h4{
     font-size: 1.2em;
     display: flex;
 }
+/*Icono del mensaje de error*/
 .mensaje-error div{
     text-align: center;
     font-size: 2em;
     color: red;
     padding: 10px;
 }
+/*Contenedor del login de administración*/
 .login{
     display: flex;
     flex-direction: column;
@@ -767,6 +747,7 @@ h4{
     width: 100%;
     gap: 40px;
 }
+/*Información inicial en el login*/
 .inicial{
     display: flex;
     flex-direction: column;
@@ -775,6 +756,7 @@ h4{
     padding: 20px 15px;
     
 }
+/*Icono en el login*/
 .inicial i{
     font-size: 1.5em;
     background: linear-gradient(to right, #00C6FF, #9242BD);
@@ -785,6 +767,7 @@ h4{
     align-items: center;
     justify-content: center;
 }
+/*Título en el login*/
 .inicial h1{
     background: linear-gradient(to right, #53c5f1, #d596f7);
     -webkit-background-clip: text;
@@ -794,17 +777,20 @@ h4{
     font-family: "Poppins", sans-serif;
     font-weight: 300;
 }
+/*Párrafo en el login*/
 .inicial p{
     margin: 0px;
     color:#b3b3cc;
     font-family: "Montserrat", sans-serif;
 }
+/*Formulario de inicio de sesión*/
 form{
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 20px;
 }
+/*Dato a llenar*/
 .campo{
     display: flex;
     flex-direction: column;

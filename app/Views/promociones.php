@@ -3,7 +3,7 @@
 
 <!-- Título de la página -->
 <?=  $this->section('titulo') ?>
-    <title>FitGymPro - Proociones </title>
+    <title>FitGymPro - Promociones </title>
 <?= $this->endSection() ?>
 
 <!-- Contenido de la página -->
