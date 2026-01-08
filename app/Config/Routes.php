@@ -15,5 +15,8 @@ $routes->post('panel/validar', 'Panel::validar');
 $routes->post('usuarios/guardar', 'Panel::guardar');
 $routes->get('editar/(:num)', 'Panel::edit/$1');
 $routes->post('usuarios/actualizar', 'Panel::actualizar');
+$routes->get('gestion_instructores', 'Panel::instructores');
+$routes->post('instructores/guardar', 'Panel::guardarInstructores');
+$routes->get('editar_instructor/(:num)', 'Panel::editInstructores/$1');
 
 

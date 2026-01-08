@@ -11,15 +11,18 @@
 <?= $this->section('contenido') ?>
     <div class="admin">
 
-    <!-- Encabezado de la página -->
+        <!-- Encabezado de la página -->
         <div class="admin-encabezado">
             <div>
                 <h1>Panel de Administración</h1>
                 <p>Gestión de usuarios y membresías</p>
             </div>
             <div>
+                <a href="<?= base_url('gestion_instructores') ?>">
+                    <input type="button" value="Instructores" class="btn-cambio">
+                </a>
                 <a href="<?= base_url('login') ?>">
-                    <input type="button" value="Cerrar Sesión">
+                    <input type="button" value="Cerrar Sesión" class="btn-salir">
                 </a>
             </div>
         </div>

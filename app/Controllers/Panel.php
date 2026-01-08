@@ -17,7 +17,7 @@ class Panel extends BaseController
     }
 
     public function validar(){
-        
+        return view('gestion');
     }
 
     public function edit($id= null){
@@ -94,6 +94,15 @@ class Panel extends BaseController
 
         //Esto esta solo para asegurar que funciona, no hace nada solo lleva a la vista
         return view('gestion');
+    }
+    public function instructores(){
+        return view('gestion_instructores');
+    }
+    public function guardarInstructores(){
+        return view('gestion_instructores');
+    }
+    public function editInstructores(){
+        return view('gestion_instructores');
     }
     
 }

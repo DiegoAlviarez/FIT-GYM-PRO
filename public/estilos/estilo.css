@@ -871,18 +871,20 @@ form{
     font-family: "Montserrat", sans-serif;
     font-size: 0.9em;
 }
-.admin-encabezado input{
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin-top: 10px;
-    background-color: rgb(240, 248, 255);
-    color: rgb(245, 140, 192);
-    border: 1px solid #9e230d;
+.btn-salir{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 87, 87, 0.1);
+    border: 1px solid #ff5757;
+    color: #ff5757;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
+    
 }
-.admin-encabezado input:hover{
-    color: #000;
-    background-color: #72031e3d;
+.btn-salir:hover{
+    color: #fff;
+    background-color: #f50642b7;
     font-weight: bold;
 }
 .pestañas{
@@ -1101,6 +1103,23 @@ tbody td{
     font-size: 1.1em;
     color: #93ddfade;
 }
+.btn-cambio{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(0, 234, 255, 0.1);
+    border: 1px solid #00eaff;
+    color: #00eaff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-cambio:hover{
+    color: #fff;
+    background-color: #00C6FF;
+    font-weight: bold;
+}
+
 
 
 
