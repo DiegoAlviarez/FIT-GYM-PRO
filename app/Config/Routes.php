@@ -18,5 +18,6 @@ $routes->post('usuarios/actualizar', 'Panel::actualizar');
 $routes->get('gestion_instructores', 'Panel::instructores');
 $routes->post('instructores/guardar', 'Panel::guardarInstructores');
 $routes->get('editar_instructor/(:num)', 'Panel::editInstructores/$1');
+$routes->post('instructores/actualizar', 'Panel::actualizarInstructores');
 
 

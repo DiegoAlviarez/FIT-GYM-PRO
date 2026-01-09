@@ -96,13 +96,31 @@ class Panel extends BaseController
         return view('gestion');
     }
     public function instructores(){
+        //Esto esta solo para asegurar que funciona, no hace nada solo lleva a la vista
         return view('gestion_instructores');
     }
     public function guardarInstructores(){
+         //Esto esta solo para asegurar que funciona, no hace nada solo lleva a la vista
         return view('gestion_instructores');
     }
-    public function editInstructores(){
-        return view('gestion_instructores');
+    public function editInstructores($id=null){
+        
+        //Datos de prueba (Esto se elimina cuando trabaje el backend)
+        $data = [
+            'instructor' => [
+                'id' => $id,
+                'nombres' => 'Hijo de Juan',
+                'apellidos'  => 'hdfsdsfds',
+                'especialidad' => 'fdsgfdsg',
+                'horario_disponibilidad' => 'bdfsdffsdf',
+                'numero_telefonico' => '783284234',
+                'foto' => 'imagen1.png'
+            ],
+        ];
+        return view('editar_instructores', $data);
+    }
+    public function actualizarInstructores(){
+        return view('editar_instructores');
     }
     
 }

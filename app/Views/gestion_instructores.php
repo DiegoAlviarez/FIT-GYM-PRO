@@ -118,7 +118,7 @@
                         <td>fgdfgf</td>
                         <td>fgdfgf</td>
                         <td class="actions">
-                            <a href="<?= base_url('editar_instructores/1') ?>" class="btn-edit"> Editar </a>
+                            <a href="<?= base_url('editar_instructor/1') ?>" class="btn-edit"> Editar </a>
                             <a href="#" class="btn-eliminar"> Eliminar </a>
                         </td>
                     </tr>
