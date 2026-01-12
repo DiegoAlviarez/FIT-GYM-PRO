@@ -1,6 +1,6 @@
 
 <!-- Llamado a la plantilla que se está usando -->
-<?= $this->extend('layouts\plantilla') ?>
+<?= $this->extend('layouts/plantilla') ?>
 
 <!-- Título de la página -->
 <?= $this->section('titulo') ?>
@@ -20,8 +20,8 @@
             <?= csrf_field(); ?>
 
             <!-- Se manda el id oculto solo al backend -->
-            <input type="hidden" name="id_persona" value="<?= esc($persona['id_persona']) ?>">
-            <input type="hidden" name="rol" value="beneficiario">
+            <input type="hidden" name="id" value="<?= esc($persona['id']) ?>">
+            <input type="hidden" name="es_titular" value="0">
 
             <!-- Mensaje de éxito -->
             <?php if(session()->getFlashdata('mensaje')): ?>
@@ -40,12 +40,16 @@
             <!-- Campos para editar -->
             <div class="cuerpo2">
                 <div class="campo2">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" name="nombre" value="<?= esc($persona['nombre']) ?>" id="nombre" required>
+                    <label for="nombres">Nombre</label>
+                    <input type="text" name="nombres" value="<?= esc($persona['nombres']) ?>" id="nombres" required>
                 </div>
                 <div class="campo2">
-                    <label for="cedula">Cédula</label>
-                    <input type="text" name="cedula" value="<?= esc($persona['cedula']) ?>" id="cedula" required>
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" name="apellidos" value="<?= esc($persona['apellidos']) ?>" id="apellidos" required>
+                </div>
+                <div class="campo2">
+                    <label for="ci">Cédula</label>
+                    <input type="text" name="ci" value="<?= esc($persona['ci']) ?>" id="ci" required>
                 </div>
                 <div class="campo2">
                     <label for="email">Correo Electrónico</label>
@@ -62,17 +66,20 @@
 
                 <div class="campo2">
                     <label>Tipo</label>
-                    <input type="text" value="<?= esc($membresia['tipo']) ?>" disabled>
-                </div>
-
-                <div class="campo2">
-                    <label>Duración</label>
-                    <input type="text" value="<?= esc($membresia['duracion']) ?>" disabled>
+                    <input type="text" value="<?= esc($plan['nombre']) ?>" disabled>
                 </div>
 
                 <div class="campo2">
                     <label>Estado</label>
                     <input type="text" value="<?= esc($membresia['estado']) ?>" disabled>
+                </div>
+                <div class="campo2">
+                    <label for="fecha_inicio">Fecha de Inicio</label>
+                    <input type="date" id="fecha_inicio" name="fecha_inicio" value="<?= esc($membresia['fecha_inicio']) ?>" disabled>
+                </div>
+                <div class="campo2">
+                    <label for="fecha_fin">Fecha de Fin</label>
+                    <input type="date" id="fecha_fin" name="fecha_fin" value="<?= esc($membresia['fecha_fin']) ?>" disabled>
                 </div>
                 
                 <!-- Botones para guardar cambios o regresar -->

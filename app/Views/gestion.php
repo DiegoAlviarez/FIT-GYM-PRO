@@ -1,10 +1,10 @@
 
 <!-- Llamado a la plantilla que se está usando -->
-<?= $this->extend('layouts\plantilla') ?>
+<?= $this->extend('layouts\plantilla') ?> 
 
 <!-- Título de la página -->
 <?= $this->section('titulo') ?>
-    <title> Gestión de Usuarios </title>
+    <title> Gestión de Socios </title>
 <?= $this->endSection() ?>
 
 <!-- Contenido de la página -->
@@ -52,12 +52,16 @@
             <!-- Campos para llenar -->
                 <div class="cuerpo2">
                     <div class="campo2">
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" placeholder="Juan Pérez" name="nombre" id="usuario" required>
+                        <label for="nombres">Nombres</label>
+                        <input type="text" placeholder="Juan Alejadro" name="nombres" id="nombres" required>
                     </div>
                     <div class="campo2">
-                        <label for="cedula">Cédula</label>
-                        <input type="text" placeholder="V-12345678" name="cedula" id="cedula" required>
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" placeholder="García Mendoza" name="apellidos" id="apellidos" required>
+                    </div>
+                    <div class="campo2">
+                        <label for="ci">Cédula</label>
+                        <input type="text" placeholder="V-12345678" name="ci" id="ci" required>
                     </div>
                     <div class="campo2">
                         <label for="email">Correo Electrónico</label>
@@ -68,22 +72,22 @@
                         <input type="tel" placeholder="+58 412 248-5263" name="telefono" id="telefono" required>
                     </div>
                     <div class="campo2">
-                        <label for="tipo_membresia">Tipo de Membresía:</label>
-                        <select id="tipo_membresia" name="tipo_membresia" required>
+                        <label for="id_plan">Tipo de Membresía:</label>
+                        <select id="id_plan" name="id_plan" required>
                             <option value="">Selecciona una opción</option>
 
                             <!-- optgroup para separar en categorías las opciones -->
                             <optgroup label="Membresías Estándar">
-                                <option value="mensual">Mensualidad Básica</option>
-                                <option value="trimestral">Plan Trimestral</option>
-                                <option value="semestral">Plan Semestral</option>
-                                <option value="anual">Anualidad Regular</option>
+                                <option value="1">Mensualidad Básica</option>
+                                <option value="2">Plan Trimestral</option>
+                                <option value="3">Plan Semestral</option>
+                                <option value="4">Anualidad Regular</option>
                             </optgroup>
                             <optgroup label="Promociones Activas">
-                                <option value="2x1">Promo 2x1 en membresías</option>
-                                <option value="familiar">Plan Familiar (4 personas)</option>
-                                <option value="personal">Plan Personal Training</option>
-                                <option value="anual_desc">Anualidad Premium (Oferta)</option>
+                                <option value="5">Promo 2x1 en membresías</option>
+                                <option value="6">Plan Familiar (4 personas)</option>
+                                <option value="7">Plan Personal Training</option>
+                                <option value="8">Anualidad Premium (Oferta)</option>
                             </optgroup>
                         </select>
                     </div>
@@ -92,7 +96,8 @@
                     <div class="beneficiario" id="bnf2">
                         <h3>Beneficiario 2</h3>
                         <div class="fila">
-                            <input type="text" placeholder="Nombre" name="beneficiarios[nombre][]"/>
+                            <input type="text" placeholder="Nombres" name="beneficiarios[nombres][]"/>
+                            <input type="text" placeholder="Apellidos" name="beneficiarios[apellidos][]"/>
                             <input type="email" placeholder="Correo Electrónico" name="beneficiarios[email][]"/>
                             <input type="tel" placeholder="Teléfono" name="beneficiarios[telefono][]"/>
                         </div>
@@ -100,7 +105,8 @@
                     <div class="beneficiario" id="bnf3">
                         <h3>Beneficiario 3</h3>
                         <div class="fila">
-                            <input type="text" placeholder="Nombre" name="beneficiarios[nombre][]"/>
+                            <input type="text" placeholder="Nombres" name="beneficiarios[nombres][]"/>
+                            <input type="text" placeholder="Apellidos" name="beneficiarios[apellidos][]"/>
                             <input type="email" placeholder="Correo Electrónico" name="beneficiarios[email][]"/>
                             <input type="tel" placeholder="Teléfono" name="beneficiarios[telefono][]"/>
                         </div>
@@ -108,18 +114,15 @@
                     <div class="beneficiario" id="bnf4">
                         <h3>Beneficiario 4</h3>
                         <div class="fila">
-                            <input type="text" placeholder="Nombre" name="beneficiarios[nombre][]"/>
+                            <input type="text" placeholder="Nombres" name="beneficiarios[nombres][]"/>
+                            <input type="text" placeholder="Apellidos" name="beneficiarios[apellidos][]"/>
                             <input type="email" placeholder="Correo Electrónico" name="beneficiarios[email][]"/>
                             <input type="tel" placeholder="Teléfono" name="beneficiarios[telefono][]"/>
                         </div>
                     </div>
                     <div class="campo2">
                         <label for="fecha_inicio">Fecha de Inicio</label>
-                        <input type="date" id="fecha_inicioS" name="fecha_inicio" required>
-                    </div>
-                    <div class="campo2">
-                        <label for="duracion">Duración</label>
-                        <input type="text" id="duracion" placeholder="Tiempo de Membresía" name="duracion" required>
+                        <input type="date" id="fecha_inicio" name="fecha_inicio" required>
                     </div>
                     <div class="alertas"> </div>
                     <div class="rgtr">
