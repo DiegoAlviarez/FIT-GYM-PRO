@@ -126,10 +126,11 @@
             <i class="fa-solid fa-wand-magic-sparkles"></i>
             <h3>¿No encuentras la promoción perfecta?</h3>
             <p>Contáctanos y crearemos un plan personalizado para ti</p>
-            <button class="reservar-btn"> Contactar Asesor </button>
+            <label for="btn-asesor" class="reservar-btn"> Contactar Asesor </label>
         </div>
     </div>
 
+|   <!-- Ventana Emergente de promociones -->
     <input type="checkbox" id="btn-modalProm">
     <div class="container-modalProm">
         <div class="content-modalProm">
@@ -141,6 +142,20 @@
         </div>
         <label for="btn-modalProm" class="cerrarModalProm"></label>
     </div>
+
+    <!-- Ventana Emergente de Asesoría -->
+    <input type="checkbox" id="btn-asesor">
+    <div class="container-modalProm">
+        <div class="content-modalProm">
+            <h2>Obten una promoción especial</h2>
+            <p>Nos ajustamos a tus necesidades, comunícate con nosotros para mayor información: +58 412 325-4789 </p>
+            <div class="btn-cerrarModalProm">
+                <label for="btn-asesor">Cerrar </label>
+            </div>
+        </div>
+        <label for="btn-asesor" class="cerrarModalProm"></label>
+    </div>
+    
 <?= $this->endSection() ?>
 
 <!-- Script usado en la página -->

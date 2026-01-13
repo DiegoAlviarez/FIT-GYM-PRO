@@ -130,8 +130,21 @@
         <div class="centrado">
             <h3>¿Quieres entrenar con nuestros expertos?</h3>
             <p>Programa una sesión personalizada y lleva tu entrenamiento al siguiente nivel</p>
-            <button class="reservar-btn"> Reservar Sesión </button>
+            <label for="btn-reservar" class="reservar-btn"> Reservar Sesión </label>
         </div>
+    </div>
+
+    <!-- Ventana Emergente de promociones -->
+    <input type="checkbox" id="btn-reservar">
+    <div class="container-modalProm">
+        <div class="content-modalProm">
+            <h2>Crea una rutina personalizada</h2>
+            <p>Con nuestro asesor tendrá la mejor ayuda, inscríbete y prepara tu guía de entrenamiento. +58 412 325-4789 </p>
+            <div class="btn-cerrarModalProm">
+                <label for="btn-reservar">Cerrar </label>
+            </div>
+        </div>
+        <label for="btn-reservar" class="cerrarModalProm"></label>
     </div>
 <?= $this->endSection() ?>
 
