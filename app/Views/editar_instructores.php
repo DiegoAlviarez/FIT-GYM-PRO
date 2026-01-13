@@ -44,8 +44,12 @@
                     <input type="text" placeholder="Pérez Gutierrez" value="<?= esc($instructor['apellidos']) ?>" name="apellidos" id="apellidos" required>
                 </div>
                 <div class="campo2">
-                    <label for="especialidad">Especialidad</label>
-                    <input type="text" placeholder="Ej: Musculación / Pesas" value="<?= esc($instructor['especialidad']) ?>" name="especialidad" id="especialidad" required>
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" placeholder="Ej: Especialista en ..." value="<?= esc($instructor['descripcion']) ?>" name="descripcion" id="descripcion" required>
+                </div>
+                <div class="campo2">
+                    <label for="habilidades">Habilidades</label>
+                    <input type="text" placeholder="Certificación, Ganancia Muscular" value="<?= esc($instructor['habilidades']) ?>" name="habilidades" id="habilidades" required>
                 </div>
                 <div class="campo2">
                     <label for="horario_disponibilidad">Horario Disponible</label>

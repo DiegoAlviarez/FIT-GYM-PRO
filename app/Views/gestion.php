@@ -144,10 +144,15 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nombre</th>
-                        <th>Plan</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Cédula de Identidad</th>
+                        <th>Correo Electrónico</th>
+                        <th>Télefono</th>
+                        <th>Tipo de Plan</th>
                         <th>Estado</th>
-                        <th>Vencimiento</th>
+                        <th>Fecha de Inicio</th>
+                        <th>Fecha de Vencimiento</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -156,8 +161,13 @@
                     <tr>
                         <td>001</td>
                         <td>xxjsjjsjjds</td>
-                        <td>Trimestral</td>
+                        <td>sfddsfdsf</td>
+                        <td>sfddsfdsf</td>
+                        <td>sfddsfdsf</td>
+                        <td>sfddsfdsf</td>
+                        <td>sfddsfdsf</td>
                         <td>Activa</td>
+                        <td>10/02/2026</td>
                         <td>10/02/2026</td>
                         <td class="actions">
                             <a href="<?= base_url('editar/1') ?>" class="btn-edit"> Editar </a>

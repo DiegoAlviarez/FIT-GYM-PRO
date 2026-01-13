@@ -67,8 +67,12 @@
                         <input type="text" placeholder="Pérez Gutierrez" name="apellidos" id="apellidos" required>
                     </div>
                     <div class="campo2">
-                        <label for="especialidad">Especialidad</label>
-                        <input type="text" placeholder="Ej: Musculación / Pesas" name="especialidad" id="especialidad" required>
+                        <label for="descripcion">Descripción</label>
+                        <input type="text" placeholder="Ej: Especialista en ..." name="descripcion" id="descripcion" required>
+                    </div>
+                    <div class="campo2">
+                        <label for="habilidades">Habilidades</label>
+                        <input type="text" placeholder="Ej: Certificación, Ganancia Muscular" name="habilidades" id="habilidades" required>
                     </div>
                     <div class="campo2">
                         <label for="horario_disponibilidad">Horario Disponible</label>
@@ -102,9 +106,11 @@
                         <th>Id</th>
                         <th>Nombres</th>
                         <th>Apellidos</th>
-                        <th>Especialidad</th>
+                        <th>Descripción</th>
+                        <th>Habilidades</th>
                         <th>Horarios Disponibles</th>
                         <th>Número Teléfonico</th>
+                        <th>Foto</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -115,6 +121,8 @@
                         <td>xxjsjjsjjds</td>
                         <td>Tggfgd</td>
                         <td>gdg</td>
+                        <td>fgdfgf</td>
+                        <td>fgdfgf</td>
                         <td>fgdfgf</td>
                         <td>fgdfgf</td>
                         <td class="actions">
