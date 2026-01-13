@@ -32,7 +32,7 @@
                 </div>
                 <p class="ahorro"> Ahorra 50%</p>
                 <p class="validez"> Válido hasta fin de mes</p>
-                <a href="<?= base_url('promociones') ?>"  class="btn-azul"> Obtener Promoción </a>
+                <label for="btn-modalProm"  class="btn-azul"> Obtener Promoción </label>
             </div>
         </div>
         <div class="tarjeta contenedor-tarjeta2 ">
@@ -48,7 +48,7 @@
                     <br><br>
                 </div>
                 <p class="validez">Para nuevos miembros</p>
-                <a href="<?= base_url('promociones') ?>"  class="btn-negro"> Obtener Promoción </a>
+                <label for="btn-modalProm" class="btn-negro"> Obtener Promoción </label>
             </div>
         </div>
         <div class="tarjeta contenedor-tarjeta5">
@@ -65,7 +65,7 @@
                 </div>
                 <p class="ahorro"> Ahorra 30%</p>
                 <p class="validez"> 30% de descuento</p>
-                <a href="<?= base_url('promociones') ?>"  class="btn-anaranjado"> Obtener Promoción </a>
+                <label for="btn-modalProm"   class="btn-anaranjado"> Obtener Promoción </label>
             </div>
         </div>
     </section>
@@ -83,7 +83,7 @@
                 </div>
                 <p class="ahorro"> Ahorra 17%</p>
                 <p class="validez"> 2 meses gratis</p>
-                <a href="<?= base_url('promociones') ?>"  class="btn-verde"> Obtener Promoción </a>
+                <label for="btn-modalProm"  class="btn-verde"> Obtener Promoción </label>
             </div>
         </div>
         <div class="tarjeta contenedor-tarjeta4">
@@ -99,7 +99,7 @@
                     <br><br>
                 </div>
                 <p class="validez"> Para nuevos miembros</p>
-                <a href="<?= base_url('promociones') ?>"  class="btn-morado"> Obtener Promoción </a>
+                <label for="btn-modalProm"  class="btn-morado"> Obtener Promoción <label>
             </div>
         </div>
         <div class="tarjeta contenedor-tarjeta3">
@@ -115,7 +115,7 @@
                 </div>
                 <p class="ahorro"> Ahorra 38%</p>
                 <p class="validez"> Válido en temporada de vacaciones </p>
-                <a href="<?= base_url('promociones') ?>"  class="btn-amarillo"> Obtener Promoción </a>
+                <label for="btn-modalProm" class="btn-amarillo"> Obtener Promoción </label>
             </div>
         </div>
     </section>
@@ -128,6 +128,18 @@
             <p>Contáctanos y crearemos un plan personalizado para ti</p>
             <button class="reservar-btn"> Contactar Asesor </button>
         </div>
+    </div>
+
+    <input type="checkbox" id="btn-modalProm">
+    <div class="container-modalProm">
+        <div class="content-modalProm">
+            <h2>¡Felicidades!</h2>
+            <p>Te falta un paso más, contáctanos al número de teléfono para activar la promoción: +58 412 325-4789 </p>
+            <div class="btn-cerrarModalProm">
+                <label for="btn-modalProm">Cerrar </label>
+            </div>
+        </div>
+        <label for="btn-modalProm" class="cerrarModalProm"></label>
     </div>
 <?= $this->endSection() ?>
 
