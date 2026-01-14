@@ -25,41 +25,44 @@ class Panel extends BaseController
         // Datos de prueba (Esto se elimina cuando trabaje el backend)
 
         $data = [
-        'persona' => [
-            'id_persona' => $id,
-            'id_titular' => $id,
-            'nombre' => 'Marco Díaz',
-            'email' => 'marco@gmail.com',
-            'telefono' => '0412-1234567',
-            'rol' => 'principal'
-        ],
-        'membresia' => [
-            'estado' => 'Activa',
-            'tipo' =>'familiar',
-            'fecha_inicio' => '2025-10-20',
-            'duracion' => '3 Meses'
-        ],
-        'beneficiarios' => [
-            [
-                'id_persona' => 50,
-                'nombre' => 'Beneficiario 1',
-                'email' => 'b1@email.com',
-                'telefono' => '0414-1111111'
+            'persona' => [
+                'id' => $id,
+                'nombres' => 'Marco Alejandro',
+                'apellidos' => 'Garcia López',
+                'ci' => 'V12345678',
+                'email' => 'marco@gmail.com',
+                'telefono' => '0412-1234567',       
             ],
-            [
-                'id_persona' => 51,
-                'nombre' => 'Beneficiario 2',
-                'email' => 'b2@email.com',
-                'telefono' => '0414-2222222'
+            'beneficiarios' => [
+                0 => [
+                    'id' => 50,
+                    'nombres' => 'Juanito',
+                    'apellidos' => 'Díaz',
+                    'email' => 'b1@email.com',
+                    'telefono' => '0414-1111111'
+                ],
+                1 => [
+                    'id' => 51,
+                    'nombres' => 'Juanito',
+                    'apellidos' => 'Díaz',
+                    'email' => 'b2@email.com',
+                    'telefono' => '0414-2222222'
+                ],
+                2 => [
+                    'id' => 52,
+                    'nombres' => 'Juanito',
+                    'apellidos' => 'Díaz',
+                    'email' => 'b3@email.com',
+                    'telefono' => '0414-3333333'
+                ]
             ],
-            [
-                'id_persona' => 52,
-                'nombre' => 'Beneficiario 3',
-                'email' => 'b3@email.com',
-                'telefono' => '0414-3333333'
-            ]
-        ]
-    ];
+            'membresia' => [
+                    'estado_actual' => 'activo',
+                    'id_plan' => 6,
+                    'fecha_inicio' => '2025-10-20',
+                    'fecha_fin' => '2026-01-20'
+                ]
+        ];
         
         return view('editar_principal', $data);
     }
@@ -69,17 +72,20 @@ class Panel extends BaseController
         //Datos de prueba (Esto se elimina cuando trabaje el backend)
         $data = [
             'persona' => [
-                'id_persona' => $id,
-                'id_titular' => 1, 
-                'nombre'     => 'Hijo de Juan',
+                'id' => $id,
+                'nombres'    => 'Juanito Junior',
+                'apellidos'  => 'Díaz Pérez',
+                'ci'         => 'V-31222333',
                 'email'      => 'hijo@email.com',
                 'telefono'   => '0412-999999',
-                'rol'        => 'beneficiario'
             ],
             'membresia' => [
-                'estado'   => 'Activa',
-                'tipo'     => 'Familiar',
-                'duracion' => '1 Año'
+                'estado' => 'activo',
+                'fecha_inicio' => '2025-10-20',
+                'fecha_fin' => '2026-01-20'
+            ],
+            'plan' => [
+                'nombre' => 'Plan Familiar (4 personas)'
             ]
         ];
 

@@ -78,13 +78,13 @@
 
                             <!-- optgroup para separar en categorías las opciones -->
                             <optgroup label="Membresías Estándar">
-                                <option value="1">Mensualidad Básica</option>
-                                <option value="2">Plan Trimestral</option>
-                                <option value="3">Plan Semestral</option>
-                                <option value="4">Anualidad Regular</option>
+                                <option value="2">Mensualidad Básica</option>
+                                <option value="3">Plan Trimestral</option>
+                                <option value="4">Plan Semestral</option>
+                                <option value="5">Anualidad Regular</option>
                             </optgroup>
                             <optgroup label="Promociones Activas">
-                                <option value="5">Promo 2x1 en membresías</option>
+                                <option value="1">Promo 2x1 en membresías</option>
                                 <option value="6">Plan Familiar (4 personas)</option>
                                 <option value="7">Plan Personal Training</option>
                                 <option value="8">Anualidad Premium (Oferta)</option>
@@ -98,8 +98,9 @@
                         <div class="fila">
                             <input type="text" placeholder="Nombres" name="beneficiarios[nombres][]"/>
                             <input type="text" placeholder="Apellidos" name="beneficiarios[apellidos][]"/>
-                            <input type="email" placeholder="Correo Electrónico" name="beneficiarios[email][]"/>
+                            <input type="text" placeholder="Cédula" name="beneficiarios[ci][]"/>
                             <input type="tel" placeholder="Teléfono" name="beneficiarios[telefono][]"/>
+                            <input type="email" placeholder="Correo Electrónico" name="beneficiarios[email][]"/>
                         </div>
                     </div>
                     <div class="beneficiario" id="bnf3">
@@ -107,8 +108,9 @@
                         <div class="fila">
                             <input type="text" placeholder="Nombres" name="beneficiarios[nombres][]"/>
                             <input type="text" placeholder="Apellidos" name="beneficiarios[apellidos][]"/>
-                            <input type="email" placeholder="Correo Electrónico" name="beneficiarios[email][]"/>
+                            <input type="text" placeholder="Cédula" name="beneficiarios[ci][]"/>
                             <input type="tel" placeholder="Teléfono" name="beneficiarios[telefono][]"/>
+                            <input type="email" placeholder="Correo Electrónico" name="beneficiarios[email][]"/>
                         </div>
                     </div>
                     <div class="beneficiario" id="bnf4">
@@ -116,8 +118,9 @@
                         <div class="fila">
                             <input type="text" placeholder="Nombres" name="beneficiarios[nombres][]"/>
                             <input type="text" placeholder="Apellidos" name="beneficiarios[apellidos][]"/>
-                            <input type="email" placeholder="Correo Electrónico" name="beneficiarios[email][]"/>
+                            <input type="text" placeholder="Cédula" name="beneficiarios[ci][]"/>
                             <input type="tel" placeholder="Teléfono" name="beneficiarios[telefono][]"/>
+                            <input type="email" placeholder="Correo Electrónico" name="beneficiarios[email][]"/>
                         </div>
                     </div>
                     <div class="campo2">

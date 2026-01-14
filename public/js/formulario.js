@@ -21,7 +21,7 @@ if(btnReg && btnGstn){
 
 
 
-const seleccion = document.getElementById('tipo_membresia');
+const seleccion = document.getElementById('id_plan');
 const caja1 = document.getElementById('bnf2');
 const caja2 = document.getElementById('bnf3');
 const caja3 = document.getElementById('bnf4');
@@ -35,10 +35,10 @@ function actualizarBeneficiarios(){
     caja2.style.display = 'none';
     caja3.style.display = 'none';
 
-    if(opcion === '2x1'){
+    if(opcion === '1'){
         caja1.style.display = 'block';
     }
-    if( opcion === 'familiar'){
+    if( opcion === '6'){
         caja1.style.display = 'block';
         caja2.style.display = 'block';
         caja3.style.display = 'block';

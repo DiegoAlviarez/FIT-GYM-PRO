@@ -21,3 +21,4 @@ $routes->get('editar_instructor/(:num)', 'Panel::editInstructores/$1');
 $routes->post('instructores/actualizar', 'Panel::actualizarInstructores');
 
 
+
