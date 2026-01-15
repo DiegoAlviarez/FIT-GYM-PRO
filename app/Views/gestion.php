@@ -160,23 +160,31 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Datos de prueba  -->
+                <!--Tabla dinámica -->
+                <?php if (!empty($socios)): ?>
+                    <?php foreach ($socios as $socio): ?>
                     <tr>
-                        <td>001</td>
-                        <td>xxjsjjsjjds</td>
-                        <td>sfddsfdsf</td>
-                        <td>sfddsfdsf</td>
-                        <td>sfddsfdsf</td>
-                        <td>sfddsfdsf</td>
-                        <td>sfddsfdsf</td>
-                        <td>Activa</td>
-                        <td>10/02/2026</td>
-                        <td>10/02/2026</td>
+                        <td><?= esc($socio['id']) ?></td>
+                        <td><?= esc($socio['nombres']) ?></td>
+                        <td><?= esc($socio['apellidos']) ?></td>
+                        <td><?= esc($socio['ci']) ?></td>
+                        <td><?= esc($socio['email']) ?></td>
+                        <td><?= esc($socio['telefono']) ?></td>
+                        <td><?= esc($socio['tipo_plan']) ?></td>
+                        <td><?= esc($socio['estado_actual']) ?></td>
+                        <td><?= esc($socio['fecha_inicio']) ?></td>
+                        <td><?= esc($socio['fecha_fin']) ?></td>
                         <td class="actions">
-                            <a href="<?= base_url('editar/1') ?>" class="btn-edit"> Editar </a>
-                            <a href="#" class="btn-eliminar"> Eliminar </a>
+                            <a href="<?= base_url('socios/editar/' . $socio['id']) ?>" class="btn-edit"> Editar </a>
+                            <a href="<?= base_url('socios/eliminar/' . $socio['id']) ?>" class="btn-eliminar"> Eliminar </a>
                         </td>
                     </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="10">Todavía no se ha cargado a nadie</td>
+                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
         </div>

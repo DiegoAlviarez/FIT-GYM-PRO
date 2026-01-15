@@ -116,20 +116,27 @@
                 </thead>
                 <tbody>
                     <!-- Datos de prueba  -->
+                <?php if(!empty($instructores)):?>
+                    <?php foreach($instructores as $instructor): ?>
+                        <tr>
+                            <td><?= esc($instructor['id']) ?></td>
+                            <td><?= esc($instructor['nombres']) ?></td>
+                            <td><?= esc($instructor['apellidos']) ?></td>
+                            <td><?= esc($instructor['descripcion']) ?></td>
+                            <td><?= esc($instructor['habilidades']) ?></td>
+                            <td><?= esc($instructor['horario_disponibilidad']) ?></td>
+                            <td><?= esc($instructor['numero_telefonico']) ?></td>
+                            <td class="actions">
+                                <a href="<?= base_url('instructores/editar/' . $instructor['id']) ?>" class="btn-edit"> Editar </a>
+                                <a href="<?= base_url('instructores/eliminar' . $instructor['id']) ?>" class="btn-eliminar"> Eliminar </a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
                     <tr>
-                        <td>001</td>
-                        <td>xxjsjjsjjds</td>
-                        <td>Tggfgd</td>
-                        <td>gdg</td>
-                        <td>fgdfgf</td>
-                        <td>fgdfgf</td>
-                        <td>fgdfgf</td>
-                        <td>fgdfgf</td>
-                        <td class="actions">
-                            <a href="<?= base_url('editar_instructor/1') ?>" class="btn-edit"> Editar </a>
-                            <a href="#" class="btn-eliminar"> Eliminar </a>
-                        </td>
+                        <td colspan="9">No se ha cargado ningún instructor</td>
                     </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
         </div>

@@ -16,7 +16,7 @@
             <?= csrf_field(); ?>
     
             <!-- Se manda el id oculto solo al backend -->
-            <input type="hidden" name="id_persona" value="<?= esc($instructor['id']) ?>">
+            <input type="hidden" name="id" value="<?= esc($instructor['id']) ?>">
             <input type="hidden" name="foto_actual" value="<?= esc($instructor['foto']) ?>">
 
             <!-- Mensaje de éxito -->

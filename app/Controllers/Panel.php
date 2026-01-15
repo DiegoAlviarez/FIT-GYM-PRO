@@ -11,7 +11,7 @@ class Panel extends BaseController
         return view('login');
     }
 
-    public function index()
+    public function socios()
     {
         return view('gestion');
     }
@@ -65,6 +65,9 @@ class Panel extends BaseController
         ];
         
         return view('editar_principal', $data);
+    }
+    public function delete($id=null){
+        return view('gestion');
     }
 
     public function editBeneficiario($id=null){
@@ -127,6 +130,9 @@ class Panel extends BaseController
     }
     public function actualizarInstructores(){
         return view('editar_instructores');
+    }
+    public function deleteInstructores(){
+        return view('gestion_instructores');
     }
     
 }
