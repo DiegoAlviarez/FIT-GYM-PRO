@@ -32,7 +32,17 @@
                 <input type="password" id="password" placeholder="Ingresa tu contraseña" name="password" required>
             </div>
             
-        <!-- Mensaje de error -->
+        <!-- Mensajes de errores en las validaciones(No cumplen las reglas que pone el validador)-->
+            <?php if (session()->getFlashdata('errors')): ?>
+                <div>
+                    <ul>
+                    <?php foreach (session()->getFlashdata('errors')as $error): ?> 
+                        <li><?= esc($error) ?></li>
+                    <?php endforeach ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+        <!-- Mensaje de datos incorrectos -->
             <?php if(session()->getFlashdata('error')): ?>
                 <div>
                     <?= session()->getFlashdata('error') ?>
