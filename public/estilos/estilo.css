@@ -959,7 +959,7 @@ form{
 .content{
     display: flex;
     flex-direction: column;
-    width: 100%;      
+    width: 80%;      
     text-align: center;
     margin: 20px auto;     
     margin-top: 20px;
@@ -971,6 +971,8 @@ form{
 }
 .gestionar{
     display: none;
+    width: 80%;
+    overflow-x: auto;
 }
 
 .cuerpo2{
@@ -978,7 +980,6 @@ form{
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    
 }
 .campo2{
     display: flex;
@@ -1062,15 +1063,18 @@ form{
     padding: 8px 15px;
     border-radius: 30px;
     border: 1px solid #000;
+    
 }
 table{
     width: 100%;
+    min-width: 1000px;
 }
 thead th{
     text-align: center;
     padding: 15px;
     border-bottom: 2px solid #00eaff62;
     font-family: "Montserrat", sans-serif;
+    
 }
 tbody td{
     padding: 10px;
