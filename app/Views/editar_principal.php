@@ -11,7 +11,7 @@
     
 <!-- Vista de edición del usuario cuando es principal -->
     <div id="content-reg" class="content">
-        
+    
         <h2>Editar Usuario</h2>
         <form method="POST" action="<?= base_url('usuarios/actualizar') ?>" autocomplete="off">
 
