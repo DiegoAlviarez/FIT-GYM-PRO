@@ -36,7 +36,7 @@
     <!-- Buscador de Membresías -->
     <section class="centrado1">
         <h1 class="titulo-consulta">Consulta de Membresía</h1>
-        <p class="parrafo-consulta"> Ingresa tu id de usuario para consultar tu información y estado de membresía</p>
+        <p class="parrafo-consulta"> Ingresa tu cédula para consultar tu información y estado de membresía</p>
         <div class="contenedor-buscador">
             <input type="text" id="buscar" placeholder="Ingresa tu número de cédula (ej: 12345678)">
             <button onclick="buscarUsuario()" class="btn-buscar"> 

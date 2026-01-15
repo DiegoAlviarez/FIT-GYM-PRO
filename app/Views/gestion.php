@@ -18,7 +18,7 @@
                 <p>Gestión de usuarios y membresías</p>
             </div>
             <div>
-                <a href="<?= base_url('gestion_instructores') ?>">
+                <a href="<?= base_url('gestion/instructores') ?>">
                     <input type="button" value="Instructores" class="btn-cambio">
                 </a>
                 <a href="<?= base_url('login') ?>">
