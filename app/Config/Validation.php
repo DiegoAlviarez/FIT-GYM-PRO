@@ -21,10 +21,8 @@ class Validation extends BaseConfig
      * @var list<string>
      */
     public array $ruleSets = [
-        Rules::class,
-        FormatRules::class,
-        FileRules::class,
-        CreditCardRules::class,
+        \CodeIgniter\Validation\Rules::class,
+        \App\Validation\CredentialRules::class, // <-- añadir
     ];
 
     /**
@@ -41,4 +39,9 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
+
+    public $login = [
+        'email'    => 'required|valid_email',
+        'password' => 'required|min_length[8]'
+    ];
 }
