@@ -42,6 +42,6 @@ class Validation extends BaseConfig
 
     public $login = [
         'email'    => 'required|valid_email',
-        'password' => 'required|min_length[8]'
+        'password' => 'required|min_length[6]',
     ];
 }
