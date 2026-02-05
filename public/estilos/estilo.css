@@ -1,0 +1,1227 @@
+
+/* Importación del tipo de letra que se va a usar*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+
+/*Fondo gradiente principal*/
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #15034F, #9242BD);
+    color: white;    
+}
+
+/* Se usa el flexbox principal para la estructura*/
+.padre{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+/* El menú de navegación */
+nav{
+    background-color: #0a0a1e99;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+} 
+
+/* Elementos de navegación en el menú */
+.menu{
+    display: flex;
+    gap: 5px;
+}
+
+/*Enlaces en el menu*/
+.menu a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+/*Efecto hover en el menú */
+.menu a:hover{
+    background-color: rgba(56, 18, 100, 0.5);
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+/*Estado activo de los botones en el menú*/
+.activo{
+    background-image: linear-gradient(to bottom right, #15034F, #9242BD);
+    border-radius: 5px;
+    border: 1px solid #00eaff;
+    color: #00eaff;
+    box-shadow: 0px 0px 4px 1px#00eaff; /* Efecto neón */
+}
+
+/* Efecto hover en la imágen del menú */
+nav img:hover{
+    transform: scale(1.1); /* Aumenta el tamaño */
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Usa el flexbox para la posición */
+.text-logo{
+    display: flex;
+    flex-direction: column; 
+}
+/*Color del texto de arriba en el logo*/
+.text-logo span.a{
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;  
+} 
+/* Color del texto de abajo en el logo*/
+.text-logo span.b{
+    color: #93ddfa;
+}
+/*Elemento decorativo*/
+.decoracion-transparent{
+    display: flex;
+    align-self: center;
+    padding: 5px 20px; /* Espacio interno */
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00eaff;
+    border-radius: 50px;
+    width: fit-content; /* Se ajusta al tamaño del contenido */
+    color: #00eaff;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1); /*Sombras*/
+    font-size: 0.9rem; /*Tamaño de la letra*/
+    font-family: "Montserrat", sans-serif; /*Tipo de letra */
+}
+/*Título de la página*/
+.titulo{
+    text-align: center; /* Texto alineado al centro */
+    font-size: 3.5em;
+    margin: 20px 0; /* Margen */
+    background: linear-gradient(to right, #53c5f1, #d596f7); /*Color de fondo de las letras */
+    -webkit-background-clip: text; /*Le da la forma a las letras*/
+    background-clip: text;
+    color: transparent; /* Convierte las letras en transparentes */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+/*Información en la página*/
+.texto{
+    text-align: center;
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;   /*Espacio entre las letras */
+    color: #b3b3cc;      /*Color de las letras*/
+}
+/*Botones que te llevan a otro lado*/
+.botones{
+    display: flex; /* Permite que el elemento sea flexible */
+    flex-direction: row; /* Organiza los elementos de forma horizontal*/
+    justify-content: center;
+    gap: 20px; /*Separación entre los elementos */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+/*Estilo general de los botones */
+.botones a{
+    text-decoration: none; /*Elimina la línea de los links */
+    padding: 12px 18px;
+    border-radius: 7px; /*Bordes redondeados */
+}
+/*Estilo personalizado para el botón*/
+.primer-btn{
+    background: linear-gradient(to right, #00C6FF, #9242BD); /*Color de fondo */
+    color: white; /*Color de letra*/
+    border: none; /*Sin borde*/
+}
+/*Estilo personalizado para el botón*/
+.segundo-btn{
+    background-color: white;
+    color: #15034f;
+    border: 2px solid transparent; 
+}
+/* Efecto al pasar el mouse sobre los botones*/
+.botones a:hover{
+    transform: scale(1.1); /*Aumento del tamaño*/
+}
+/* Tarjetas en página principal*/
+.contenedor{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px; /* Margen superior*/
+}
+/*Estilo de las tarjetas*/
+.tarjetas{
+    width: 200px; /*Ancho*/
+    padding: 20px;
+    color: #c7b8fa; /*Color de las letras*/
+    border-radius: 15px; /*Bordes redondeados */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3); /*color del fondo */
+    border: 1px solid rgba(255, 255, 255, 0.1); /*Color del borde*/
+}
+/*Efecto al pasar el mouse */
+.tarjetas:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/*Título en las tarjetas*/
+.tarjetas h3{
+    font-size: 2.5em;   /*Tamaño de la letra*/
+}
+/*Párrafo en las tarjetas*/
+.tarjetas p{
+    color: #b3b3cc;
+    letter-spacing: 1px; /*Espacio entre las letras*/
+}
+/*Centra el contenido que está adentro*/
+.centrado1{
+    text-align: center; /*Texto centrado*/
+    margin-top: 40px; /*Margen de la parte superior*/
+    padding: 5px 20px; /*Espacio interno: Ariba-Abajo, Derecha-Izquierda */
+    margin-bottom: 10px; /*Margen departe inferior */
+}
+/*Título del buscador*/
+.titulo-consulta{
+    font-size: 2em; /*Tamaño de la letra*/
+    color: #93ddfa; /*Color de la letra*/
+    margin-bottom: 10px; /*Margen inferior*/
+    font-family: "Poppins", sans-serif; /*Tipo de letra*/
+    font-weight: 500; /* Controla el grosor de la letra*/
+}
+/*Párrafo en el buscador */
+.parrafo-consulta{
+    color: #aca2e6; /*Color de la letra*/
+    margin-top: 0px; /*Margen superior*/
+    font-family: "Montserrat", sans-serif; /*Tipo de letra*/
+}
+/* Contiene el input y los botones para buscar a las personas*/
+.contenedor-buscador{
+    display: flex; /* Hace el contenedor flexible*/
+    justify-content: center; 
+    background-color: #1c1d38;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin: 5px 15%;
+    gap: 20px;
+}
+/*Estilo del input*/
+.contenedor-buscador input{
+    background: transparent;
+    border: none;
+    color: #ccc;
+    outline: none;
+    width: 100%;
+    padding-left: 10px;
+    background-color: rgba(18, 18, 40, 0.8);
+    border-radius: 10px;
+}
+/*Estilo del botón de buscar*/
+.btn-buscar{
+    display: flex;
+    padding: 6px 7px;
+    border-radius: 7px;
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    color: #fff;
+    gap: 5px;
+    align-items: center;
+    box-shadow: 0px 4px 20px rgba(56, 18, 100, 0.5);
+    border: none;
+}
+/* Pie de página que se usa en todo el proyecto */
+footer{
+    background-color: #0a0a1e99;
+    color: #b3b3cc;
+    padding-top: 40px;
+    margin-top: 40px ;
+}
+/* Se encarga de la posición del footer */
+.footer-contenedor{
+    display: flex;
+    justify-content:center;
+    padding: 0 50px 40px 50px;
+    margin: 0 auto;
+    gap: 7%;
+}
+/*Separa el elemento*/
+.footer-columna{
+    width: 200px;
+}
+/*Título en las columnas*/
+.footer-columna h3{
+    color: #00eaff;
+    font-size: 1.1em;
+}
+/*Listas en el footer*/
+.footer-columna ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-columna li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+}
+/* Iconos en el footer*/
+.footer-columna i{
+    color: #00eaff;
+    width: 20px;
+    text-align: center;
+}
+/* Organiza elementos dentro de la columna*/
+.footer-columna div.elementos{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Organiza el texto dentro de la columna*/
+.footer-columna span{
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/*Espacio donde están las tarjetas en las instalaciones*/
+.grupo{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+/*Estilo dentro de la tarjeta de las instalaciones*/
+.cabecera{
+    padding: 15px;        
+    border-radius: 10px;
+    font-size: 1.5em;
+}
+/*Estilo de la tarjeta*/
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(4, 5, 22, 0.432);
+    border-radius: 10px;
+    justify-content: center;
+    border: 1px solid rgba(0, 234, 255, 0.116);
+    padding: 30px;
+    width: 18%;
+}
+/*Título de la tarjeta*/
+.tarjeta h2{
+    font-weight: 300;
+}
+/*Lista dentro de la tarjeta*/
+.tarjeta ul{
+    padding-left: 20px;
+}
+/* Colores individuales para las tarjetas con su efecto hover*/
+.azul{
+background-color: #00C6FF;
+}
+.contenedor-tarjeta1:hover{
+    border: 1px solid rgba(0, 234, 255, 0.507);
+    box-shadow: 0px 5px 20px rgba(50, 234, 255, 0.507);
+}
+.tarjeta:hover .cabecera{
+    transform: scale(1.1);
+}
+.contenedor-tarjeta1 li::marker{ 
+    color: #00C6FF;
+}
+.contenedor-tarjeta2:hover{
+    border: 1px solid black;
+    box-shadow: 0px 5px 20px rgb(0, 0, 0, 0.507);
+}
+.negro{
+    background-color: black;
+}
+.contenedor-tarjeta2 li::marker{
+    color: black;
+}
+.contenedor-tarjeta3:hover{
+    border: 1px solid rgb(221, 223, 104);
+    box-shadow: 0px 5px 20px rgb(221, 223, 104, 0.507);
+}
+.amarillo{
+    background-color: #babd34;
+}
+.contenedor-tarjeta3 li::marker{
+    color: #dddf68;
+}
+.contenedor-tarjeta4:hover{
+    border: 1px solid rgb(160, 66, 197);
+    box-shadow: 0px 5px 20px rgb(160, 66, 197, 0.507);
+}
+.morado{
+    background-color: #a042c5;
+}
+.contenedor-tarjeta4 li::marker{
+    color: #a042c5;
+}
+.contenedor-tarjeta5:hover{
+    border: 1px solid  #f57d1a;
+    box-shadow: 0px 5px 20px rgb(221, 223, 104, 0.507);
+}
+.anaranjado{
+    background-color: #f57d1a;
+}
+.contenedor-tarjeta5 li::marker{
+    color:#f57d1a;
+}
+.contenedor-tarjeta6:hover{
+    border: 1px solid  #57da5e;
+    box-shadow: 0px 5px 20px  rgb(87, 218, 94, 0.507);
+}
+.verde{
+    background-color: #57da5e;
+}
+.contenedor-tarjeta6 li::marker{
+    color: #57da5e;
+}
+/* Estilo de tarjeta */
+.tarjeta2{
+    background-color: rgba(4, 5, 22, 0.432);
+    border-radius: 10px;
+    gap: 5px;
+    border: 1px solid rgba(0, 234, 255, 0.116);
+    padding: 30px;    
+    transition: all 500ms ease;
+}
+/*Título de la tarjheta*/
+.tarjeta2 h2{
+    font-weight: 500;
+}
+/*Títulos generales*/
+h2{
+   color: #93ddfa;
+   font-family: "Poppins", sans-serif;
+}
+/*Posición del elemento*/
+.tarjeta2 figure{
+    margin: 0;
+    width: 100%;
+    height: 400px;
+    overflow: hidden; /*Oculta el contenido que se sale de los límites*/
+    transition: all 500ms ease; /*Permite que el cambio sea lento*/
+    border-radius: 5px;
+}
+/*Espacio de la imagen*/
+.tarjeta2 figure img{
+    width: 100%;
+    height: 100%;
+}
+/*Efecto de la imagen*/
+.tarjeta2:hover img{
+    transform: scale(1.2);
+}
+
+/*Estilo del contenedor*/
+.tarjeta-instructores{
+    background-color: rgba(5, 4, 49, 0.37);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 234, 255, 0.507);
+    overflow: hidden; 
+    width: 350px;
+   
+}
+/*Espacio de la imagen*/
+.tarjeta-instructores figure{
+    height: 250px;
+    margin: 0;
+    overflow: hidden;
+    transition: all 500ms ease;
+}
+/*Efecto de la imagen*/
+.tarjeta-instructores figure img{
+    width: 100%;
+    height: 100%;
+}
+/*Información dentro de la tarjeta*/
+.info{
+    padding: 25px;
+}
+/*Párrafos dentro de la tarjeta*/
+.info p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9em;
+}
+/*Efecto al pasar el mouse sobre la tarjeta*/
+.tarjeta-instructores:hover{
+    box-shadow: 0px 5px 20px rgba(0, 234, 255, 0.507);
+}
+/*Efecto al pasar el mouse sobre la imágen*/
+.tarjeta-instructores:hover img{
+    transform: scale(1.1);
+}
+/*Descripciones de los entrenadores*/
+.contenedor-tags{
+    display: flex;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8em;
+}
+/*Estilo de las descripciones*/
+.tag{
+    border: 1px solid #00eaff;
+    color:#00eaff;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+/*Color de títulos generales*/
+h4{
+    color: #914fb4;
+}
+/*Contenedor de reserva de sesión*/
+.contenedor-transparente{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 30px 20px;
+    background-color:  rgba(35, 132, 197, 0.144);
+    border: 1px solid #2384c5;
+    border-radius: 10px;
+    width: 55%;
+}
+/*Centrar el contenido del contenedor*/
+.contenedor-transparente .centrado{
+    text-align: center;
+    margin: 40px 20px;
+}
+/*Títulos del contenedor*/
+.centrado h3{
+    color: #bee9fa;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+/*Párrafos del contenedor*/
+.centrado p{
+    color: #b3b3cc;
+    font-family: "Montserrat", sans-serif;
+}
+/*Botón de reservar sesión*/
+.reservar-btn{
+    display: block;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 20px;
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    color: white;
+    border: none;
+    margin: 15px auto;
+    padding: 15px;
+    text-align: left;
+    padding-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+/*Efecto al pasar el mouse sobre el botón*/
+.reservar-btn:hover{
+    box-shadow: 0px 0px 20px  rgba(0, 234, 255, 0.507);
+}
+/*Iconos dentro de la tarjeta*/
+.info i{
+    color:   #93ddfa;
+    font-size: 0.9em;
+}
+/*Iconos dentro de un botón*/
+.centrado i{
+    color: #00eaff;
+    font-size: 1.8em;
+}
+/*Información sobre los descuentos*/
+.descuento{
+    color: #b3b3cc;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9em;
+}
+/*Elementos dentro de la tarjeta*/
+.contenido{
+    display: flex;
+    flex-direction: column;
+}
+/*Botón en la tarjeta*/
+.contenido label{
+    width: 100%;
+    max-width: 90%;
+    border-radius: 10px;
+    color: white;
+    margin-top: auto;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    padding-left: 20px;
+    text-decoration: none;
+}
+/*Colores de los botones en cada tarjeta*/
+.btn-azul{
+    background:#00C6FF;
+}
+.btn-azul:hover{
+    background:#00c8ffab;
+}
+.btn-negro{
+    background-color: #000;
+}
+.btn-negro:hover{
+    background-color: #0e0d0dab;
+}
+.btn-anaranjado{
+    background-color: #f57d1a;
+}
+.btn-anaranjado:hover{
+    background-color: #f57d1ac5;
+}
+.btn-verde{
+    background-color: #57da5e;
+}
+.btn-verde:hover{
+    background-color: #57da5ebe;
+}
+.btn-morado{
+    background-color:  #a042c5;
+}
+.btn-morado:hover{
+    background-color:  #a042c5bb;
+}
+.btn-amarillo{
+    background-color: #babd34;
+}
+.btn-amarillo:hover{
+    background-color: #dddf68bd;
+}
+/*Información de ahorro*/
+.ahorro{
+    font-size: 0.9em;
+    margin: 0;
+    color: #64da6a;
+}
+/*Tiempo válido de la promoción*/
+.validez{
+    font-size: 0.8em;
+    color: #09c2d3;
+    margin-top: 25px;
+    font-family:"Roboto", sans-serif;;
+}
+/*Precio con descuento*/
+.pvp-actual{
+    font-size: 1.5em;
+    font-weight: bold;
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/*Precio sin descuento*/
+.pvp-anterior{
+    text-decoration: line-through;
+    color: #acb6be;
+    font-size: 1em;
+}
+/*Contenedor de la información del usuario cuando  */
+.resultado{
+    flex-direction: column;   
+    max-width: 60%; 
+    width: 100%;      
+    margin: 20px auto;     
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(4, 5, 22, 0.432);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    border: 1px solid #00eaff94;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em ;
+}
+/*Contenedor de la información personal del usuario*/
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-radius: 15px 15px 0 0;
+}
+.info-usuario{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.datos-personales{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+/*Contenedor del elemento activo*/
+.estado{
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+/*Cuando el elemento se encuentra activo*/
+.estado.activa{
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+}
+/*Cuando el elemento se encuentra expirado*/
+.estado.expirada{
+    background-color: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+}
+/*Imagen del usuario*/
+.foto-usuario{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 20px  rgba(3, 14, 15, 0.582);
+}
+/*Datos de la membresía*/
+.cuerpo{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+/*Contiene cada información a mostrar*/
+.dato{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(18, 18, 40, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    width: 49%;
+    box-sizing: border-box;
+}
+/*Iconos en la membresía*/
+.dato i{
+    font-size: 1.4em;
+    color: #00eafff5;
+}
+/*Contenedor del error cuando se introduce una cédula incorrecta*/
+.mensaje-error{
+    background-color: rgba(4, 5, 22, 0.432);
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 60%;
+    width: 100%;
+    border: 1px solid #ff260046;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+}
+/*Icono del mensaje de error*/
+.mensaje-error div{
+    text-align: center;
+    font-size: 2em;
+    color: red;
+    padding: 10px;
+}
+/*Contenedor del login de administración*/
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  rgba(4, 5, 22, 0.432);
+    border: 1px solid #00c8ff46;
+    align-items: center;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 20%;
+    width: 100%;
+    gap: 40px;
+}
+/*Información inicial en el login*/
+.inicial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 15px;
+    
+}
+/*Icono en el login*/
+.inicial i{
+    font-size: 1.5em;
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Título en el login*/
+.inicial h1{
+    background: linear-gradient(to right, #53c5f1, #d596f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+/*Párrafo en el login*/
+.inicial p{
+    margin: 0px;
+    color:#b3b3cc;
+    font-family: "Montserrat", sans-serif;
+}
+/*Formulario de inicio de sesión*/
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+/*Dato a llenar*/
+.campo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #53c5f1;
+    gap: 7px;
+}
+.campo label{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.campo input{
+    border-radius: 10px;
+    background-color: rgba(4, 5, 22, 0.589);
+    border: 1px solid #00c8ff38;
+    padding: 9px;
+    color: #ffffffb4;
+    padding-left: 15px;
+}
+.error{
+    background-color: #70232388; 
+    border: 1px solid #f05757; 
+    color: #fcfafa;            
+    padding: 12px 15px;
+    border-radius: 8px;        
+    margin-bottom: 10px;     
+    width: 100%; 
+    max-width: 90%;          
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600; 
+}
+.exito{
+    background-color: #2c702388; 
+    border: 1px solid #75f057; 
+    color: #fcfafa;            
+    padding: 12px 15px;
+    border-radius: 8px;        
+    margin-bottom: 10px;     
+    width: 100%; 
+    max-width: 90%;          
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600; 
+}
+
+.inicio{
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    color: #fff;
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    border: none;
+    box-shadow: 0px 0px 3px #03b4e6;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inicio :hover{
+    background: linear-gradient(to right, #00c8ffa6, #9242bdab);
+}
+.admin{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 15%;
+    gap: 30px;    
+}
+.admin-encabezado{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.admin-encabezado h1{
+    margin: 0px;
+    font-size: 2.7em;
+    background: linear-gradient(to right, #53c5f1, #d596f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+.admin-encabezado p{
+    margin: 0px;
+    color: #ffffffb4;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9em;
+}
+.btn-salir{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 87, 87, 0.1);
+    border: 1px solid #ff5757;
+    color: #ff5757;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    
+}
+.btn-salir:hover{
+    color: #fff;
+    background-color: #f50642b7;
+    font-weight: bold;
+}
+.pestañas{
+    margin-top: 3%;
+    border: 1px solid #00eaff96;
+    padding: 5px;
+    border-radius: 30px;
+    width: fit-content;
+    display: flex;
+    gap: 5px;
+    background-color:  rgba(4, 5, 22, 0.432);
+    
+}
+.pestañas input{
+    background: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 20px;    
+    font-family: "Roboto", sans-serif;
+}
+.pestañas input:hover{
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.pestañas input.activo2{
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    
+}
+.beneficiario{
+    display: none;
+    width: 100%;          
+    padding: 15px;   
+}
+.beneficiario h3{
+    text-align: center;
+    color: #93ddfa;
+    font-size: 1.3em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+.beneficiario input {
+    width: 33%;      
+    border-radius: 10px;
+    background-color: rgba(4, 5, 22, 0.589);
+    border: 1px solid #00c8ff38;
+    padding: 10px;
+    color: #ffffff;
+    padding-left: 15px;
+    outline: none;
+}
+.beneficiario input::placeholder{
+    color: #ffffffb4;
+}
+.fila {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;        
+    width: 100%;
+}
+.content h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 80%;      
+    text-align: center;
+    margin: 20px auto;     
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(4, 5, 22, 0.432);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    border: 1px solid #00eaff94;
+}
+.gestionar{
+    display: none;
+    width: 80%;
+    overflow-x: auto;
+}
+
+.cuerpo2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.campo2{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #93ddfa;
+    gap: 7px;
+    width: 60%;
+}
+.campo2 input{
+    border-radius: 10px;
+    background-color: rgba(4, 5, 22, 0.589);
+    border: 1px solid #00c8ff38;
+    padding: 10px;
+    color: #ffffffb4;
+    padding-left: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.campo2 input::placeholder{
+    color: #ffffffb4;
+}
+.campo2 label{
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9em;
+}
+.campo2 select{
+    border-radius: 10px;
+    background-color: rgba(4, 5, 22, 0.589);
+    border: 1px solid #00c8ff38;
+    padding: 10px;
+    color: #ffffffb4;
+    padding-left: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.rgtr{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 20%;
+    margin-top: 15px;
+}
+.rgtr input{
+    padding: 10px;
+    color: #fff;
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    border: none;
+    box-shadow: 0px 0px 3px #03b4e6;
+    border-radius: 15px;
+}
+.rgtr input:hover{
+    background: linear-gradient(to right, #00c8ffa6, #9242bdab);
+}
+.rgtr-edit{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.rgtr-edit a{
+    text-decoration: none;
+}
+.btns-editar{
+    padding: 10px;
+    color: #fff;
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    border: none;
+    box-shadow: 0px 0px 3px #03b4e6;
+    border-radius: 15px;
+}
+.btns-editar:hover{
+    background: linear-gradient(to right, #00c8ffa6, #9242bdab);
+}
+.encabezado-tabla{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.buscador{
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    
+}
+table{
+    width: 100%;
+    min-width: 1000px;
+}
+thead th{
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #00eaff62;
+    font-family: "Montserrat", sans-serif;
+    
+}
+tbody td{
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9em;
+}
+.actions{
+    padding: 15px 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.grande{
+    padding: 40px 5px;
+}
+.btn-edit{
+    color: white;
+    text-decoration: none;
+    border: 1px solid #eef113;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 0, 0.438);
+}
+.btn-eliminar{
+    color: white;
+    text-decoration: none;
+    border: 1px solid #f11313;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(230, 48, 24, 0.329);
+}
+
+.sub-form{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    color: #93ddfade;
+}
+.btn-cambio{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(0, 234, 255, 0.1);
+    border: 1px solid #00eaff;
+    color: #00eaff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-cambio:hover{
+    color: #fff;
+    background-color: #00C6FF;
+    font-weight: bold;
+}
+
+/*  Ventana Modal de Promociones  */
+#btn-modalProm,
+#btn-asesor,
+#btn-reservar{
+    display: none;
+}
+
+.container-modalProm{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(7px);
+}
+#btn-modalProm:checked + .container-modalProm,
+#btn-asesor:checked + .container-modalProm,
+#btn-reservar:checked + .container-modalProm{
+    display: flex;
+}
+
+.content-modalProm{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.2);
+    border-radius: 15px;
+}
+.content-modalProm h2{ 
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+.content-modalProm p{
+    padding: 15px 0px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    color: #ccc;
+    text-align: center;
+}
+.content-modalProm .btn-cerrarModalProm{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-modalProm .btn-cerrarModalProm label{
+    padding: 10px 15px;
+    background: linear-gradient(to right, #00C6FF, #9242BD);
+    border: none;
+    box-shadow: 0px 0px 3px #03b4e6;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.content-modalProm .btn-cerrarModalProm label:hover{
+    box-shadow: 0px 0px 10px#03b4e6;
+}
+.cerrarModalProm{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+

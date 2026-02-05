@@ -1,0 +1,36 @@
+# --------------------------------------------------------------------
+# Ignorar archivos del sistema y entorno
+# --------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+nbproject/
+
+
+# --------------------------------------------------------------------
+# Ignorar dependencias de Composer (se instalan con composer install)
+# --------------------------------------------------------------------
+/vendor/
+composer.lock
+
+# --------------------------------------------------------------------
+# Ignorar archivos temporales y generados por el Framework
+# --------------------------------------------------------------------
+# Ignora todo en writable pero MANTIENE las carpetas vacías necesarias
+/writable/cache/*
+!/writable/cache/index.html
+/writable/debugbar/*
+!/writable/debugbar/index.html
+/writable/logs/*
+!/writable/logs/index.html
+/writable/session/*
+!/writable/session/index.html
+/writable/uploads/*
+!/writable/uploads/index.html
+
+# --------------------------------------------------------------------
+# Ignorar pruebas y builds
+# --------------------------------------------------------------------
+/build/
+/phpunit.xml
