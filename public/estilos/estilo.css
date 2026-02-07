@@ -1141,9 +1141,8 @@ tbody td{
 }
 
 /*  Ventana Modal de Promociones  */
-#btn-modalProm,
-#btn-descripcion,
-#btn-reservar{
+#btn-prom,
+#btn-descripcion{
     display: none;
 }
 
@@ -1159,9 +1158,8 @@ tbody td{
     z-index: 100;
     backdrop-filter: blur(7px);
 }
-#btn-modalProm:checked + .container-modalProm,
-#btn-descripcion:checked + .container-descripcion,
-#btn-reservar:checked + .container-modalProm{
+#btn-prom:checked + .container-descripcion,
+#btn-descripcion:checked + .container-descripcion{
     display: flex;
 }
 

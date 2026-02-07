@@ -26,7 +26,7 @@
                 </div>
                 <p class="ahorro"> Ahorra 50%</p>
                 <p class="validez"> Válido hasta fin de mes</p>
-                <label for="btn-modalProm"  class="btn-azul"> Obtener Promoción </label>
+                <label for="btn-prom"  class="btn-azul"> Obtener Promoción </label>
             </div>
         </div>
         <div class="tarjeta contenedor-tarjeta2 ">
@@ -42,7 +42,7 @@
                     <br><br>
                 </div>
                 <p class="validez">Para nuevos miembros</p>
-                <label for="btn-modalProm" class="btn-negro"> Obtener Promoción </label>
+                <label for="btn-prom" class="btn-negro"> Obtener Promoción </label>
             </div>
         </div>
         <div class="tarjeta contenedor-tarjeta5">
@@ -59,7 +59,7 @@
                 </div>
                 <p class="ahorro"> Ahorra 30%</p>
                 <p class="validez"> 30% de descuento</p>
-                <label for="btn-modalProm"   class="btn-anaranjado"> Obtener Promoción </label>
+                <label for="btn-prom"   class="btn-anaranjado"> Obtener Promoción </label>
             </div>
         </div>
     </section>
@@ -77,7 +77,7 @@
                 </div>
                 <p class="ahorro"> Ahorra 17%</p>
                 <p class="validez"> 2 meses gratis</p>
-                <label for="btn-modalProm"  class="btn-verde"> Obtener Promoción </label>
+                <label for="btn-prom"  class="btn-verde"> Obtener Promoción </label>
             </div>
         </div>
         <div class="tarjeta contenedor-tarjeta4">
@@ -93,7 +93,7 @@
                     <br><br>
                 </div>
                 <p class="validez"> Para nuevos miembros</p>
-                <label for="btn-modalProm"  class="btn-morado"> Obtener Promoción <label>
+                <label for="btn-prom"  class="btn-morado"> Obtener Promoción </label>
             </div>
         </div>
         <div class="tarjeta contenedor-tarjeta3">
@@ -109,13 +109,22 @@
                 </div>
                 <p class="ahorro"> Ahorra 38%</p>
                 <p class="validez"> Válido en temporada de vacaciones </p>
-                <label for="btn-modalProm" class="btn-amarillo"> Obtener Promoción </label>
+                <label for="btn-prom" class="btn-amarillo"> Obtener Promoción </label>
             </div>
         </div>
+
+        <input type="checkbox" id="btn-prom">
+        <div class="container-descripcion">
+            <div class="content-descripcion">
+                <h2>Nueva Promo</h2>
+                <p>Activa tu cuenta con nosotros</p>
+                <div class="btn-cerrarDescripcion">
+                    <label for="btn-prom"> Cerrar </label>
+                </div>
+            </div>
+        </div>
+
     </section>
-
-
-   
     
 <?= $this->endSection() ?>
 
