@@ -20,11 +20,11 @@
         <nav>
             <div class="logo">
                 <div >
-                    <img src="<?= base_url('imagenes/imagen1.png') ?>" alt="FitGymPro" width="50" title="FitGymPro">
+                    <img src="<?= base_url('imagenes/imagen1.png') ?>" alt="FitGymPro" width="100" title="FitGymPro">
                 </div>
                 <div class="text-logo" >
                     <span class="a">FitGymPro</span>
-                    <span class="b">Gestión Inteligente</span>
+                    <span class="b">Entrena con nosotros</span>
                 </div>
             </div>
             <div class="menu"> 

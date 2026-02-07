@@ -23,7 +23,7 @@ body{
 /* El menú de navegación */
 nav{
     background-color: #0a0a1e99;
-    padding: 10px 50px;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;    
@@ -56,16 +56,11 @@ nav{
     box-shadow: 0px 0px 4px 1px#00eaff; /* Efecto neón */
 }
 
-/* Efecto hover en la imágen del menú */
-nav img:hover{
-    transform: scale(1.1); /* Aumenta el tamaño */
-}
-
-
 .logo{
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: larger;
 }
 /* Usa el flexbox para la posición */
 .text-logo{

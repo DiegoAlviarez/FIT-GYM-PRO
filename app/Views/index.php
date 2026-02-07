@@ -17,7 +17,7 @@
     <p class="texto"> La plataforma definitiva para gestionar usuarios, membresías e <br> instalaciones de tu gimnasio con tecnología de última<br> generación.</p>
     <div class="botones"> 
         <a class="primer-btn" href="<?= base_url('promociones') ?>"> Ver Promociones </a>
-        <a class="segundo-btn" href="#"> Consultar Membresía </a>
+        
     </div>
     <div class="contenedor">
         <div class="tarjetas"> 
