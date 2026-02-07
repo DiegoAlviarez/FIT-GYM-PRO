@@ -116,8 +116,8 @@
                 <img src="<?= base_url('imagenes/imagen3.jpg') ?>" alt="gym2">
             </figure>
             <div>
-                <h2>Tecnología Avanzada</h2>
-                <p>Equipos conectados que rastrean tu progreso y se sincronizan con tu perfil</p>
+                <h2>Equipamiento Moderno</h2>
+                <p>Máquinas para potenciar tus entrenamientos </p>
             </div>
         </div>
     </section>

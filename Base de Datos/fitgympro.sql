@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-02-2026 a las 09:33:31
+-- Tiempo de generación: 05-02-2026 a las 16:35:37
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `fitgympro`
 --
+CREATE DATABASE IF NOT EXISTS `fitgympro` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `fitgympro`;
 
 -- --------------------------------------------------------
 
@@ -28,8 +30,8 @@ SET time_zone = "+00:00";
 --
 
 DROP TABLE IF EXISTS `instructores`;
-CREATE TABLE IF NOT EXISTS `instructores` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `instructores` (
+  `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `especialidad` varchar(100) NOT NULL,
   `horario_disponibilidad` varchar(100) DEFAULT NULL,
@@ -37,9 +39,8 @@ CREATE TABLE IF NOT EXISTS `instructores` (
   `experiencia` int(2) DEFAULT 0,
   `certificaciones` text DEFAULT NULL,
   `telefono` varchar(20) DEFAULT NULL,
-  `created_at` datetime DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `created_at` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `instructores`
@@ -55,18 +56,16 @@ INSERT INTO `instructores` (`id`, `nombre`, `especialidad`, `horario_disponibili
 --
 
 DROP TABLE IF EXISTS `miembros`;
-CREATE TABLE IF NOT EXISTS `miembros` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `miembros` (
+  `id` int(11) NOT NULL,
   `cedula` varchar(20) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `telefono` varchar(15) DEFAULT NULL,
   `fecha_pago` date DEFAULT NULL,
   `estado_pago` enum('Al día','Pendiente') DEFAULT 'Pendiente',
   `plan` varchar(50) DEFAULT NULL,
-  `socio_principal_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `cedula` (`cedula`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `socio_principal_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `miembros`
@@ -82,12 +81,11 @@ INSERT INTO `miembros` (`id`, `cedula`, `nombre`, `telefono`, `fecha_pago`, `est
 --
 
 DROP TABLE IF EXISTS `planes`;
-CREATE TABLE IF NOT EXISTS `planes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `planes` (
+  `id` int(11) NOT NULL,
   `nombre_plan` varchar(100) NOT NULL,
-  `precio_usd` decimal(10,2) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `precio_usd` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `planes`
@@ -110,14 +108,12 @@ INSERT INTO `planes` (`id`, `nombre_plan`, `precio_usd`) VALUES
 --
 
 DROP TABLE IF EXISTS `usuarios_admin`;
-CREATE TABLE IF NOT EXISTS `usuarios_admin` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `usuarios_admin` (
+  `id` int(11) NOT NULL,
   `nombre` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `clave` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `clave` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios_admin`
@@ -125,6 +121,64 @@ CREATE TABLE IF NOT EXISTS `usuarios_admin` (
 
 INSERT INTO `usuarios_admin` (`id`, `nombre`, `email`, `clave`) VALUES
 (1, 'Admin FitGym', 'admin@gym.com', '$2a$12$HXv2f8CVHxYYVFAoQMSLyOMbSvG.nljBrnLUVPfmdSwN56QgX4KCi');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `instructores`
+--
+ALTER TABLE `instructores`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `miembros`
+--
+ALTER TABLE `miembros`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `cedula` (`cedula`);
+
+--
+-- Indices de la tabla `planes`
+--
+ALTER TABLE `planes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `usuarios_admin`
+--
+ALTER TABLE `usuarios_admin`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `instructores`
+--
+ALTER TABLE `instructores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `miembros`
+--
+ALTER TABLE `miembros`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `planes`
+--
+ALTER TABLE `planes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios_admin`
+--
+ALTER TABLE `usuarios_admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

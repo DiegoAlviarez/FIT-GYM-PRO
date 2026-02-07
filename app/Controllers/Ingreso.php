@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UsuarioModel; 
 
-class Ingreso extends BaseController // El nombre de la clase DEBE ser igual al del archivo
+class Ingreso extends BaseController // 
 {
     public function index()
     {

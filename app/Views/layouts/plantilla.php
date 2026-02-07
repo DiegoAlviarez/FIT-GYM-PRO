@@ -20,7 +20,7 @@
         <nav>
             <div class="logo">
                 <div >
-                    <img src="<?= base_url('imagenes/imagen1.png') ?>" onclick="contadorClick()" alt="FitGymPro" width="50" title="FitGymPro">
+                    <img src="<?= base_url('imagenes/imagen1.png') ?>" alt="FitGymPro" width="50" title="FitGymPro">
                 </div>
                 <div class="text-logo" >
                     <span class="a">FitGymPro</span>
@@ -45,7 +45,7 @@
                         <img src="<?= base_url('imagenes/imagen1.png') ?>" alt="FitGymPro" width="60" title="FitGymPro">
                         <span>FitGymPro</span>
                     </div>
-                    <p>La plataforma definitiva para la gestión inteligente de gimnasios</p>
+                    <p>Ubicados en Venezuela, Edo. La Guaira, nos encuentras en el centro de Maiquetía</p>
                 </div>
                 <div class="footer-columna">
                     <h3>Contacto</h3>
@@ -74,8 +74,6 @@
             </div>
         </footer>
     </div>
-    <script src="<?= base_url('js/click.js') ?>"></script>
-
     <!-- Sección que se puede cambiar-->
     <?= $this->renderSection('script') ?>
 

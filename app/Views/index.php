@@ -11,8 +11,8 @@
 
     
     <h1 class="titulo">Bienvenido a FitGymPro</h1>
-    <div class="decoracion-transparent">
-        <p> Sistema de Gestión Avanzado</p>
+    <div class="decoracion-transparent" onclick="contadorClick()" >
+        <a class="acceso" href="<?= base_url('login') ?>"> Sistema de Gestión Avanzado</a>
     </div>
     <p class="texto"> La plataforma definitiva para gestionar usuarios, membresías e <br> instalaciones de tu gimnasio con tecnología de última<br> generación.</p>
     <div class="botones"> 

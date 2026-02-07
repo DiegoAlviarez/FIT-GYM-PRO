@@ -87,15 +87,19 @@ nav img:hover{
 .decoracion-transparent{
     display: flex;
     align-self: center;
-    padding: 5px 20px; /* Espacio interno */
+    padding: 20px 20px; /* Espacio interno */
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid #00eaff;
     border-radius: 50px;
-    width: fit-content; /* Se ajusta al tamaño del contenido */
-    color: #00eaff;
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1); /*Sombras*/
-    font-size: 0.9rem; /*Tamaño de la letra*/
+    cursor: pointer;
     font-family: "Montserrat", sans-serif; /*Tipo de letra */
+}
+.acceso{
+    text-decoration: none;
+    color:#00eaff;
+    font-size: 0.9rem;
+    
 }
 /*Título de la página*/
 .titulo{

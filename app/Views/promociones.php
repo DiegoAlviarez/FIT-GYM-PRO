@@ -12,12 +12,6 @@
 <!-- Promociones activas del gimnasio -->
     
     <h1 class="titulo"> Promociones Activas </h1>
-    <div class="decoracion-transparent">
-        <p>
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-             Ofertas Especiales 
-        </p>
-    </div>
     <p class="texto"> Aprovecha nuestras ofertas exclusivas y comienza tu transformación hoy</p>
     <section class="grupo">
         <div class="tarjeta contenedor-tarjeta1">

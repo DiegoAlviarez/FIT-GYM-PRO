@@ -216,7 +216,5 @@ class Panel extends BaseController
         } else {
             return redirect()->back()->with('error', 'No se pudieron guardar los cambios');
         }
-    }
-
-    
+    }    
 }
