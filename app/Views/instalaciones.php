@@ -125,6 +125,6 @@
 
     <!-- Scripts usados en la página -->
     <?= $this->section('script') ?>
-        <script src="op1.js"></script>
+        <script src="<?= base_url('js/op1.js') ?>"></script>
     <?= $this->endSection() ?>
     

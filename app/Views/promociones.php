@@ -10,7 +10,6 @@
 <?= $this->section('contenido') ?>
     
 <!-- Promociones activas del gimnasio -->
-    
     <h1 class="titulo"> Promociones Activas </h1>
     <p class="texto"> Aprovecha nuestras ofertas exclusivas y comienza tu transformación hoy</p>
     <section class="grupo">
@@ -115,45 +114,12 @@
         </div>
     </section>
 
-<!-- Botón para contactar con un asesor-->
-    <div class="contenedor-transparente">
-        <div class="centrado">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <h3>¿No encuentras la promoción perfecta?</h3>
-            <p>Contáctanos y crearemos un plan personalizado para ti</p>
-            <label for="btn-asesor" class="reservar-btn"> Contactar Asesor </label>
-        </div>
-    </div>
 
-|   <!-- Ventana Emergente de promociones -->
-    <input type="checkbox" id="btn-modalProm">
-    <div class="container-modalProm">
-        <div class="content-modalProm">
-            <h2>¡Felicidades!</h2>
-            <p>Te falta un paso más, contáctanos al número de teléfono para activar la promoción: +58 412 325-4789 </p>
-            <div class="btn-cerrarModalProm">
-                <label for="btn-modalProm">Cerrar </label>
-            </div>
-        </div>
-        <label for="btn-modalProm" class="cerrarModalProm"></label>
-    </div>
-
-    <!-- Ventana Emergente de Asesoría -->
-    <input type="checkbox" id="btn-asesor">
-    <div class="container-modalProm">
-        <div class="content-modalProm">
-            <h2>Obten una promoción especial</h2>
-            <p>Nos ajustamos a tus necesidades, comunícate con nosotros para mayor información: +58 412 325-4789 </p>
-            <div class="btn-cerrarModalProm">
-                <label for="btn-asesor">Cerrar </label>
-            </div>
-        </div>
-        <label for="btn-asesor" class="cerrarModalProm"></label>
-    </div>
+   
     
 <?= $this->endSection() ?>
 
 <!-- Script usado en la página -->
 <?= $this->section('script') ?>
-    <script src="op3.js"></script>    
+    <script src="<?= base_url('js/op3.js') ?>"></script>    
 <?= $this->endSection() ?>

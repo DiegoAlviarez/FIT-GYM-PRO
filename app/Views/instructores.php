@@ -14,7 +14,7 @@
     <p class="texto">Profesionales certificados dedicados a ayudarte a alcanzar tus objetivos</p>
 
     <section class="grupo">
-        <div class="tarjeta-instructores">
+        <label for="btn-descripcion" class="tarjeta-instructores" data-descripcion="Texto skljsfhhfdhfjhsdjfh">
             <figure>
                 <img src="<?= base_url('imagenes/instructor1.jpg') ?>" alt="gym-instructor1" title="Gym">
             </figure>
@@ -31,8 +31,8 @@
                     <span class="tag">Experto TRX</span>
                 </div>
             </div>
-        </div>
-        <div class="tarjeta-instructores">
+        </label>
+        <label for="btn-descripcion" class="tarjeta-instructores" data-descripcion="Pgfvhfgfhgfdgdfgdfgdfh">
             <figure>
                 <img src="<?= base_url('imagenes/instructor2.jpg') ?>" alt="gym-instructor2">
             </figure>
@@ -49,8 +49,8 @@
                     <span class="tag">Nutrición Deportiva</span>
                 </div>
             </div>
-        </div>
-        <div class="tarjeta-instructores">
+        </label>
+        <label for="btn-descripcion" class="tarjeta-instructores" data-descripcion="jkhgkhgbnmbnjlik">
             <figure>
                 <img src="<?= base_url('imagenes/instructor3.jpg') ?>" alt="gym-instructor3">
             </figure>
@@ -67,10 +67,10 @@
                     <span class="tag">Instructora Barra</span>
                 </div>
             </div>
-        </div>
+        </label>
     </section>
     <section class="grupo">
-        <div class="tarjeta-instructores">
+        <label for="btn-descripcion" class="tarjeta-instructores" data-descripcion="kgfsawfdfdgdfdsfd">
             <figure>
                 <img src="<?= base_url('imagenes/instructor4.jpg') ?>" alt="gym-instructor4">
             </figure>
@@ -86,8 +86,8 @@
                     <span class="tag">Resistencia</span>
                 </div>
             </div>
-        </div>
-        <div class="tarjeta-instructores">
+        </label>
+        <label for="btn-descripcion" class="tarjeta-instructores" data-descripcion="vgxsfdsfhghjhgkhgkgh">
             <figure>
                 <img src="<?= base_url('imagenes/instructor5.jpg') ?>" alt="gym-instructor5">
             </figure>
@@ -104,15 +104,15 @@
                     <span class="tag">Salvavidas</span>
                 </div>
             </div>
-        </div>
-        <div class="tarjeta-instructores">
+        </label>
+        <label for="btn-descripcion" class="tarjeta-instructores" data-descripcion="ljkghvkiuyiugiig  fukfffu  gfhdgd">
             <figure>
                 <img src="<?= base_url('imagenes/instructor6.jpg') ?>" alt="gym-instructor6">
             </figure>
             <div class="info">
                 <h2>Roberto García</h2>
                 <h4>Boxeo & MMA</h4>
-                <p>Peleador profesional con pasión por enseñar defensa personal.</p>
+                <p>Peleador profesional con pasión por enseñar defensa personal</p>
                 <p>
                     <i class="fa-solid fa-medal"></i> 9 años de experiencia
                 </p>
@@ -122,33 +122,24 @@
                     <span class="tag">Kickboxing</span>
                 </div>
             </div>
-        </div>
+        </label>
     </section>
 
-    <!--Botón para reservar sesión de entrenamiento -->
-    <div class="contenedor-transparente">
-        <div class="centrado">
-            <h3>¿Quieres entrenar con nuestros expertos?</h3>
-            <p>Programa una sesión personalizada y lleva tu entrenamiento al siguiente nivel</p>
-            <label for="btn-reservar" class="reservar-btn"> Reservar Sesión </label>
+    <input type="checkbox" id="btn-descripcion">
+    <div class="container-descripcion">
+        <div class="content-descripcion">
+            <p id="descripcionInstructores"></p>
+            <div class="btn-cerrarDescripcion"> 
+                <label for="btn-descripcion"> Cerrar </label>
+            </div>
         </div>
     </div>
 
-    <!-- Ventana Emergente de promociones -->
-    <input type="checkbox" id="btn-reservar">
-    <div class="container-modalProm">
-        <div class="content-modalProm">
-            <h2>Crea una rutina personalizada</h2>
-            <p>Con nuestro asesor tendrá la mejor ayuda, inscríbete y prepara tu guía de entrenamiento. +58 412 325-4789 </p>
-            <div class="btn-cerrarModalProm">
-                <label for="btn-reservar">Cerrar </label>
-            </div>
-        </div>
-        <label for="btn-reservar" class="cerrarModalProm"></label>
-    </div>
+    
 <?= $this->endSection() ?>
 
 <!-- Script usado en la página -->
-<?= $this->Section('scripts') ?>
-    <script src="op2.js"></script>
+<?= $this->section('script') ?>
+    <script src="<?= base_url('js/op2.js') ?>"> </script>
+    <script src="<?= base_url('js/modal.js') ?>"></script>
 <?= $this->endSection() ?>

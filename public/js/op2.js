@@ -1,10 +1,7 @@
-    
-    //Ejecuta el código cuando la página termina de cargar
-    window.onload = function(){
-        //Localiza el elemento
-        var elemento = document.getElementById("op2");
-        //Le agrega una clase
-        if (elemento){
-            elemento.classList.add("activo");
-        }
-    }
+
+window.addEventListener('load', function() {
+  var elemento = document.getElementById("op2");
+  if (elemento) {
+    elemento.classList.add("activo");
+  }
+});
