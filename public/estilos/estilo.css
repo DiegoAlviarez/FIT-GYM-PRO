@@ -294,6 +294,16 @@ footer{
     gap: 50px;
     justify-content: center;
 }
+.grupo_Ins{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1206px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
 /*Estilo dentro de la tarjeta de las instalaciones*/
 .cabecera{
     padding: 15px;        
@@ -429,10 +439,26 @@ h2{
     border: 1px solid rgba(0, 234, 255, 0.507);
     overflow: hidden; 
     width: 350px;
-   
+}
+.tarjeta-instructores1{
+    background-color: rgba(5, 4, 49, 0.37);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 234, 255, 0.507);
+    overflow: hidden; 
+    width: 380px;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
 }
 /*Espacio de la imagen*/
-.tarjeta-instructores figure{
+.tarjeta-instructores  figure{
+    height: 250px;
+    margin: 0;
+    overflow: hidden;
+    transition: all 500ms ease;
+}
+.tarjeta-instructores1  figure{
     height: 250px;
     margin: 0;
     overflow: hidden;
@@ -440,6 +466,10 @@ h2{
 }
 /*Efecto de la imagen*/
 .tarjeta-instructores figure img{
+    width: 100%;
+    height: 100%;
+}
+.tarjeta-instructores1 figure img{
     width: 100%;
     height: 100%;
 }
@@ -812,6 +842,16 @@ form{
     padding: 9px;
     color: #ffffffb4;
     padding-left: 15px;
+}
+textarea#biografia {
+    width: 95%;
+    min-height: 80px; 
+    resize: vertical; 
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(4, 5, 22, 0.589);
+    border: 1px solid #00c8ff38;
+    color: #ffffffb4;
 }
 .error{
     background-color: #70232388; 

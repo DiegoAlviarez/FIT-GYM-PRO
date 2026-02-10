@@ -18,10 +18,8 @@
                 <p>Gestión de usuarios y membresías</p>
             </div>
             <div>
-                <a href="<?= base_url('gestion/instructores') ?>">
-                    <input type="button" value="Instructores" class="btn-cambio">
-                </a>
-                <a href="<?= base_url('login') ?>">
+                
+                <a href="<?= base_url('salir') ?>">
                     <input type="button" value="Cerrar Sesión" class="btn-salir">
                 </a>
             </div>
@@ -51,14 +49,10 @@
         <div id="content-reg" class="content">
             <h2>Registrar Nuevo Usuario</h2>
 
-            
-
-            <form method="POST" action="<?= base_url('usuarios/guardar') ?>" autocomplete="off">
+            <form method="POST" action="<?= base_url('panel/guardar') ?>" autocomplete="off">
             
                 <!-- Token de seguridad -->
                 <?= csrf_field(); ?>
-
-
 
             <!-- Campos para llenar -->
                 <div class="cuerpo2">
@@ -67,8 +61,8 @@
                         <input type="text" placeholder="Juan Alejandro" name="nombre" id="nombres" required>
                     </div>
                     <div class="campo2">
-                        <label for="ci">Cédula</label>
-                        <input type="text" placeholder="V-12345678" name="cedula" id="ci" required>
+                        <label for="cedula">Cédula</label>
+                        <input type="text" placeholder="V-12345678" name="cedula" id="cedula" required>
                     </div>
                     
                     <div class="campo2">

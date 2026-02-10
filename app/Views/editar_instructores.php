@@ -10,7 +10,7 @@
 <?= $this->section('contenido') ?>
     <div id="content-reg" class="content">
         <h2>Editar Instructor</h2>
-        <form method="POST" action="<?= base_url('instructores/actualizar/' . $instructor['id']) ?>" autocomplete="off" >
+        <form method="POST" action="<?= base_url('instructores/actualizar/' . $instructor['id']) ?>" autocomplete="off" enctype="multipart/form-data" >
 
             <!-- Token de seguridad -->
             <?= csrf_field(); ?>
@@ -43,25 +43,32 @@
                 </div>
                 <div class="campo2">
                     <label for="experiencia">Años de Experiencia</label>
-                    <input type="number" name="experiencia" id="experiencia" value="<?= esc($instructor['experiencia']) ?>" min="0" placeholder="Ej: 8">
+                    <input type="text" name="experiencia" id="experiencia" value="<?= esc($instructor['experiencia']) ?>" min="0" placeholder="Ej: 8">
                 </div>
                 <div class="campo2">
                     <label for="descripcion">Descripción</label>
                     <input type="text" placeholder="Ej: Especialista en ..." value="<?= esc($instructor['descripcion']) ?>" name="descripcion" id="descripcion" required>
+                </div>
+                <div class="campo2">
+                    <label for="biografia">Biografía:</label>
+                    <textarea placeholder="Historia del Instructor" name="biografia" id="biografia" required><?= esc($instructor['biografia']) ?></textarea>
                 </div>
                 <div class="campo2" >
                         <label for="certificaciones">Certificaciones (Separa con comas)</label>
                         <input type="text" name="certificaciones" id="certificaciones" value="<?= esc($instructor['certificaciones']) ?>" placeholder="Ej: NSCA, CrossFit Nivel 2, TRX">
                     </div>
                 <div class="campo2">
-                    <label for="horario_disponibilidad">Horario Disponible</label>
-                    <input type="text" placeholder="Ej: Lun - Vie: 07:00 AM - 01:00 PM" value="<?= esc($instructor['horario_disponibilidad']) ?>" name="horario_disponibilidad" id="horario_disponibilidad" required>
+                    <label for="horario">Horario Disponible</label>
+                    <input type="text" placeholder="Ej: Lun - Vie: 07:00 AM - 01:00 PM" value="<?= esc($instructor['horario']) ?>" name="horario" id="horario" required>
                 </div>
                 <div class="campo2">
                     <label for="telefono">Número de Teléfono</label>
                     <input type="tel" placeholder="0412-1234567" name="telefono" value="<?= esc($instructor['telefono']) ?>" id="telefono" required>
                 </div>
-
+                <div class="campo2">
+                    <label for="foto">Foto del Instructor:</label>
+                    <input type="file" name="foto" id="foto" accept="image/*">
+                </div>
                 <!-- Botones para guardar cambios o regresar -->
                 <div class="rgtr-edit">
                     <input class="btns-editar" type="submit" value="Guardar Cambios"/>

@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\PersonaModel;
+
 class Home extends BaseController
 {
     public function index(): string
@@ -14,7 +16,12 @@ class Home extends BaseController
     }
 
     public function verInstructores(){
-        return view('instructores');
+        $model = new PersonaModel();
+
+        $data['instructores'] = $model->getInstructores();
+
+        return view('instructores', $data);
+
     }
 
     public function verPromociones(){

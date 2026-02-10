@@ -17,10 +17,7 @@
                 <p>Gestión de usuarios y membresías</p>
             </div>
             <div>
-                <a href="<?= base_url('gestion') ?>">
-                    <input type="button" value="Usuarios" class="btn-cambio">
-                </a>
-                <a href="<?= base_url('login') ?>">
+                <a href="<?= base_url('salir') ?>">
                     <input type="button" value="Cerrar Sesión" class="btn-salir">
                 </a>
             </div>
@@ -51,7 +48,7 @@
         <!-- Formulario de registro de Instructores -->
         <div id="content-reg" class="content">
             <h2>Registrar Nuevo Instructor</h2>
-            <form method="POST" action="<?= base_url('instructores/guardar') ?>" autocomplete="off" >
+            <form method="POST" action="<?= base_url('instructores/guardar') ?>" autocomplete="off" enctype="multipart/form-data" >
 
                 <!-- Token de seguridad -->
                 <?= csrf_field(); ?>
@@ -70,11 +67,15 @@
                     </div>
                     <div class="campo2">
                         <label for="experiencia">Años de Experiencia</label>
-                        <input type="number" name="experiencia" id="experiencia" min="0" placeholder="Ej: 8">
+                        <input type="text" name="experiencia" id="experiencia" min="0" placeholder="Ej: 8 años">
                     </div>
                     <div class="campo2">
                         <label for="descripcion">Descripción Profesional:</label>
                         <input type="text" placeholder="Ej: Especialista en ..." name="descripcion" id="descripcion" required>
+                    </div>
+                    <div class="campo2">
+                        <label for="biografia">Biografía:</label>
+                        <textarea placeholder="Historia del Instructor" name="biografia" id="biografia" required></textarea>
                     </div>
                     <div class="campo2" >
                         <label for="certificaciones">Certificaciones (Separa con comas)</label>
@@ -87,6 +88,10 @@
                     <div class="campo2">
                         <label for="telefono">Número de Teléfono</label>
                         <input type="tel" placeholder="0412-1234567" name="telefono" id="telefono" required>
+                    </div>
+                    <div class="campo2">
+                        <label for="foto">Foto del Instructor:</label>
+                        <input type="file" name="foto" id="foto" accept="image/*">
                     </div>
                     <div class="rgtr">
                         <input type="submit" value="Registrar Instructor"/>
@@ -108,6 +113,7 @@
                         <th>Id</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
+                        <th>Biografía</th>
                         <th>Especialidad</th>
                         <th>Experiencia</th>
                         <th>Certificaciones</th>
@@ -124,10 +130,11 @@
                             <td><?= esc($instructor['id']) ?></td>
                             <td><?= esc($instructor['nombre']) ?></td>
                             <td><?= esc($instructor['descripcion']) ?></td>
+                            <td><?= esc($instructor['biografia']) ?></td>
                             <td><?= esc($instructor['especialidad']) ?></td>
                             <td><?= esc($instructor['experiencia']) ?></td>
                             <td><?= esc($instructor['certificaciones']) ?></td>
-                            <td><?= esc($instructor['horario_disponibilidad']) ?></td>
+                            <td><?= esc($instructor['horario']) ?></td>
                             <td><?= esc($instructor['telefono']) ?></td>
                             <td class="actions grande">
                                 <a href="<?= base_url('instructores/editar/' . $instructor['id']) ?>" class="btn-edit"> Editar </a>

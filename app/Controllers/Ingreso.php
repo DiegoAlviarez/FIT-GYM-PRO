@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\UsuarioModel; 
+use App\Models\PersonaModel; 
 
 class Ingreso extends BaseController // 
 {
@@ -14,21 +14,33 @@ class Ingreso extends BaseController //
     public function validar()
     {
         $session = session();
-        $model = new UsuarioModel();
+        $model = new PersonaModel();
         
-        $email = $this->request->getPost('email');
+        $email = trim($this->request->getPost('email'));
         $password = $this->request->getPost('password');
 
         $user = $model->where('email', $email)->first();
-
+        
+    
         if ($user && password_verify($password, $user['clave'])) {
             $session->set([
                 'id' => $user['id'],
+                'rol' => $user['rol'],
                 'isLoggedIn' => true
             ]);
-            return redirect()->to(base_url('gestion'));
+            if ($user['rol'] === 'administrador'){
+                return redirect()->to(base_url('gestion/instructores'));
+            } else{
+                return redirect()->to(base_url('gestion'));
+            }
         }
 
         return redirect()->back()->with('error', 'Datos incorrectos');
+    }
+
+    public function salir(){
+        $session = session();
+        $session->destroy();
+        return redirect()->to(base_url('login'));
     }
 }
