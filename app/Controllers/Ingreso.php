@@ -30,9 +30,10 @@ class Ingreso extends BaseController //
             ]);
             if ($user['rol'] === 'administrador'){
                 return redirect()->to(base_url('gestion/instructores'));
-            } else{
+            } elseif ($user['rol'] === 'empleado'){
                 return redirect()->to(base_url('gestion'));
             }
+            
         }
 
         return redirect()->back()->with('error', 'Datos incorrectos');

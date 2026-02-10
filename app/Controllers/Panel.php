@@ -3,9 +3,10 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ClaseModel;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\PersonaModel;
-
+use App\Models\PromocionModel;
 
 class Panel extends BaseController
 {
@@ -25,6 +26,7 @@ class Panel extends BaseController
             return $this->response->setJSON([
                 'status' => 'success',
                 'nombre' => $miembro['nombre'],
+                'id' => $miembro['id'],
                 'estado' => $miembro['estado_pago'],
                 'plan'   => $miembro['nombre_plan'] ?? $miembro['plan'],
                 'fecha'  => $miembro['fecha_pago'],
@@ -200,7 +202,118 @@ public function guardar() {
         } else {
             return redirect()->back()->with('error', 'No se pudieron guardar los cambios');
         }
-    }    
+    } 
+    
+    public function nuevaPromocion() {
+        if(!session()->get('isLoggedIn')){
+            return redirect()->to(base_url('login'))->with('error', 'Inicia sesión');
+        }
+        $model = new PersonaModel();
+        $data['promociones'] = $model->orderBy('created_at', 'DESC')->findAll();
+        return view('gestion_promociones', $data);
+    }
+
+    public function gestionPromociones() {
+        if(!session()->get('isLoggedIn')){
+            return redirect()->to(base_url('login'))->with('error', 'Inicia sesión');
+        }
+
+        $model = new PromocionModel();
+        
+        $data['promociones'] = $model->orderBy('created_at', 'DESC')->findAll();
+
+        return view('gestion_promociones', $data);
+    }   
+
+    public function guardarPromocion() {
+        $model = new PromocionModel();
+    
+        $data = [
+            'titulo' => $this->request->getPost('titulo'),
+            'subtitulo' => $this->request->getPost('subtitulo'),
+            'precio_actual' => $this->request->getPost('precio_actual'),
+            'precio_anterior' => $this->request->getPost('precio_anterior'),
+            'icono' => $this->request->getPost('icono'),
+            'color_clase'=> $this->request->getPost('color_clase'),
+            'ahorro' => $this->request->getPost('ahorro'),
+            'validez' => $this->request->getPost('validez'),
+            'estado' => 'activa'
+        ];
+
+        if ($model->insert($data)) {
+            return redirect()->to(base_url('promociones/nuevo'))->with('success', 'Promoción Registrada');
+        } else {
+            return redirect()->back()->with('error', 'Ocurrió un error al guardar.');
+        }
+    }
+    public function eliminarPromocion($id) {
+        $model = new PromocionModel();
+    
+        
+        if ($model->find($id)) {
+            $model->delete($id);
+            return redirect()->to(base_url('promociones/nuevo'))->with('success', 'Promoción eliminada');
+        } else {
+            return redirect()->to(base_url('promociones/nuevo'))->with('error', 'Error al eliminar');
+        }
+    }
+
+    public function editarPromocion($id) {
+        $model = new PromocionModel();
+        $data['promocion'] = $model->find($id);
+
+        if (!$data['promocion']) {
+            return redirect()->to(base_url('promociones/nuevo'))->with('error', 'Promoción no encontrada');
+        }
+
+        return view('editar_promociones', $data);
+    }
+
+    public function actualizarPromocion($id) {
+        $model = new PromocionModel();
+    
+        $data = [
+            'titulo' => $this->request->getPost('titulo'),
+            'subtitulo' => $this->request->getPost('subtitulo'),
+            'precio_actual' => $this->request->getPost('precio_actual'),
+            'precio_anterior' => $this->request->getPost('precio_anterior'),
+            'icono' => $this->request->getPost('icono'),
+            'color_clase'  => $this->request->getPost('color_clase'),
+            'ahorro'  => $this->request->getPost('ahorro'),
+            'validez' => $this->request->getPost('validez'),
+            'estado' => $this->request->getPost('estado') 
+        ];
+
+        if ($model->update($id, $data)) {
+            return redirect()->to(base_url('promociones/nuevo'))->with('success', 'Promoción actualizada');
+        } else {
+            return redirect()->back()->with('error', 'No se pudieron guardar los cambios');
+        }
+    }
+    public function nuevaClase(){
+        $personaModel = new PersonaModel();
+        $claseModel = new ClaseModel();
+
+        $data['instructores'] = $personaModel->whereIn('rol', ['instructor'])->findAll();
+
+        return view('admin/nueva_clase', $data);
+    }
+
+    public function guardarClase()
+    {
+        $model = new ClaseModel();
+
+        $data = [
+            'nombre' => $this->request->getPost('nombre'),
+            'descripcion' => $this->request->getPost('descripcion'),
+            'horario' => $this->request->getPost('horario'),
+            'cupos_max' => $this->request->getPost('cupos_max'),
+            'id_instructor' => $this->request->getPost('id_instructor')
+        ];
+        if ($model->insert($data)) {
+            return redirect()->to(base_url('gestion/clases'))->with('success', 'Clase creada con éxito');
+        }
+    }
 
     
 }

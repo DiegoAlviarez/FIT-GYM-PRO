@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PersonaModel;
+use App\Models\PromocionModel;
 
 class Home extends BaseController
 {
@@ -25,7 +26,11 @@ class Home extends BaseController
     }
 
     public function verPromociones(){
-        return view('promociones');
+        $model = new PromocionModel();
+
+        $data['promociones'] = $model->where('estado', 'activa')->findAll();
+
+        return view('promociones', $data);
     }
 
 }

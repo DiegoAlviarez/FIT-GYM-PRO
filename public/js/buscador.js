@@ -3,7 +3,8 @@ const resultado = document.getElementById("resultado");
 const mensajeError = document.getElementById("mensaje_error");
 const nombreUsuario = document.getElementById("nombre-usuario");
 const cedulaUsuario = document.getElementById("cedula-usuario");
-const emailUsuario = document.getElementById("email-usuario");
+//const emailUsuario = document.getElementById("email-usuario");
+const idUsuario = document.getElementById("email-usuario");
 const telefonoUsuario = document.getElementById("telefono-usuario");
 const membresiaUsuario = document.getElementById("membresia-usuario");
 const validezUsuario = document.getElementById("validez-usuario");
@@ -25,6 +26,7 @@ function buscarUsuario() {
     if (cedulaBuscada === "") {
         return;
     }
+    
 
     // Preparar los datos para enviar via POST
     let formData = new FormData();
@@ -58,7 +60,8 @@ function buscarUsuario() {
         // Asignamos los datos devueltos por el controlador a los elementos HTML
         nombreUsuario.textContent = usuario.nombre;
         cedulaUsuario.textContent = cedulaBuscada;
-        emailUsuario.textContent = usuario.email || 'No registrado';
+        idUsuario.textContent = "Socio #" + usuario.id;
+        //emailUsuario.textContent = usuario.email || 'No registrado';
         telefonoUsuario.textContent = usuario.telefono || 'No registrado';
         membresiaUsuario.textContent = usuario.plan;
         validezUsuario.textContent = usuario.fecha;

@@ -63,9 +63,9 @@
         </div>
         <div class="cuerpo">
             <div class="dato">
-                <i class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-id-card"></i>
                 <div class="datos-personales">
-                    <small>Email</small>
+                    <small>Identificador</small>
                     <span id="email-usuario"></span>
                 </div>
             </div>

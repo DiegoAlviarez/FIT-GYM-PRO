@@ -333,64 +333,64 @@ footer{
 .azul{
 background-color: #00C6FF;
 }
-.contenedor-tarjeta1:hover{
+.tarjeta.contenedor-tarjeta-azul:hover{
     border: 1px solid rgba(0, 234, 255, 0.507);
     box-shadow: 0px 5px 20px rgba(50, 234, 255, 0.507);
 }
 .tarjeta:hover .cabecera{
     transform: scale(1.1);
 }
-.contenedor-tarjeta1 li::marker{ 
+.contenedor-tarjeta-azul li::marker{ 
     color: #00C6FF;
 }
-.contenedor-tarjeta2:hover{
+.tarjeta.contenedor-tarjeta-negro:hover{
     border: 1px solid black;
     box-shadow: 0px 5px 20px rgb(0, 0, 0, 0.507);
 }
 .negro{
     background-color: black;
 }
-.contenedor-tarjeta2 li::marker{
+.contenedor-tarjeta-negro li::marker{
     color: black;
 }
-.contenedor-tarjeta3:hover{
+.tarjeta.contenedor-tarjeta-amarillo:hover{
     border: 1px solid rgb(221, 223, 104);
     box-shadow: 0px 5px 20px rgb(221, 223, 104, 0.507);
 }
 .amarillo{
     background-color: #babd34;
 }
-.contenedor-tarjeta3 li::marker{
+.contenedor-tarjeta-amarillo li::marker{
     color: #dddf68;
 }
-.contenedor-tarjeta4:hover{
+.tarjeta.contenedor-tarjeta-morado:hover{
     border: 1px solid rgb(160, 66, 197);
     box-shadow: 0px 5px 20px rgb(160, 66, 197, 0.507);
 }
 .morado{
     background-color: #a042c5;
 }
-.contenedor-tarjeta4 li::marker{
+.contenedor-tarjeta-morado li::marker{
     color: #a042c5;
 }
-.contenedor-tarjeta5:hover{
+.tarjeta.contenedor-tarjeta-anaranjado:hover{
     border: 1px solid  #f57d1a;
-    box-shadow: 0px 5px 20px rgb(221, 223, 104, 0.507);
+    box-shadow: 0px 5px 20px rgb(156, 79, 16);
 }
 .anaranjado{
     background-color: #f57d1a;
 }
-.contenedor-tarjeta5 li::marker{
+.contenedor-tarjeta-verde li::marker{
     color:#f57d1a;
 }
-.contenedor-tarjeta6:hover{
+.tarjeta.contenedor-tarjeta-verde:hover{
     border: 1px solid  #57da5e;
     box-shadow: 0px 5px 20px  rgb(87, 218, 94, 0.507);
 }
 .verde{
     background-color: #57da5e;
 }
-.contenedor-tarjeta6 li::marker{
+.contenedor-tarjeta-verde li::marker{
     color: #57da5e;
 }
 /* Estilo de tarjeta */

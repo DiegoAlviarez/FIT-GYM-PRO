@@ -17,6 +17,9 @@
                 <p>Gestión de usuarios y membresías</p>
             </div>
             <div>
+                <a href="<?= base_url('promociones/nuevo') ?>">
+                    <input type="button" value="Nueva Promoción" class="btn-cambio">
+                </a>
                 <a href="<?= base_url('salir') ?>">
                     <input type="button" value="Cerrar Sesión" class="btn-salir">
                 </a>

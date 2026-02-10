@@ -12,106 +12,34 @@
 <!-- Promociones activas del gimnasio -->
     <h1 class="titulo"> Promociones Activas </h1>
     <p class="texto"> Aprovecha nuestras ofertas exclusivas y comienza tu transformación hoy</p>
-    <section class="grupo">
-        <div class="tarjeta contenedor-tarjeta1">
-            <div class="cabecera azul">
-                <i class="fa-solid fa-users"></i>
-            </div>
-            <div class="contenido">
-                <h2>2x1 en Membresías</h2>
-                <p class="descuento"> Trae un amigo y ambos obtienen un 50% de descuento</p>
-                <div>
-                    <span class="pvp-actual"> $40  </span>
-                    <span class="pvp-anterior"> $80  </span>
+    <section class="grupo_Ins">
+        <?php if(!empty($promociones)): ?>
+            <?php foreach($promociones as $promocion): ?>
+                <div class="tarjeta contenedor-tarjeta-<?= esc($promocion['color_clase']) ?>">
+                    <div class="cabecera <?= esc($promocion['color_clase']) ?>">
+                        <i class="<?= esc($promocion['icono']) ?>"></i>
+                    </div>
+                    <div class="contenido">
+                        <h2><?= esc($promocion['titulo']) ?></h2>
+                        <p class="descuento"> <?= esc($promocion['subtitulo']) ?></p>
+                        <div>
+                            <span class="pvp-actual"> <?= esc($promocion['precio_actual']) ?>  </span>
+                            <?php if(!empty($promocion['precio_anterior'])): ?>
+                                <span class="pvp-anterior"> <?= esc($promocion['precio_anterior']) ?> </span>
+                            <?php endif; ?>
+                        </div>
+                        <?php if(!empty($promocion['ahorro'])): ?>
+                            <p class="ahorro"> <?= esc($promocion['ahorro']) ?></p>
+                        <?php endif; ?>
+                        <p class="validez"> <?= esc($promocion['validez']) ?></p>
+                        <label for="btn-prom"  class="btn-<?= esc($promocion['color_clase']) ?>"> Obtener Promoción </label>
+                    </div>
                 </div>
-                <p class="ahorro"> Ahorra 50%</p>
-                <p class="validez"> Válido hasta fin de mes</p>
-                <label for="btn-prom"  class="btn-azul"> Obtener Promoción </label>
-            </div>
-        </div>
-        <div class="tarjeta contenedor-tarjeta2 ">
-            <div class="cabecera negro">
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <div class="contenido">
-                <h2>Clases de Yoga Gratis</h2>
-                <p class="descuento"> Primera semana de clases de Yoga y Pilates sin costo</p>
-                <div>
-                    <span class="pvp-actual"> GRATIS  </span>
-                    <span class="pvp-anterior"> $60  </span>
-                    <br><br>
-                </div>
-                <p class="validez">Para nuevos miembros</p>
-                <label for="btn-prom" class="btn-negro"> Obtener Promoción </label>
-            </div>
-        </div>
-        <div class="tarjeta contenedor-tarjeta5">
-            <div class="cabecera anaranjado">
-                <i class="fa-solid fa-users"></i>
-            </div>
-            <div class="contenido">
-                <h2>Pack Personal Training </h2>
-                <p class="descuento"> 5 sesiones de entrenamiento personalizado</p>
-                <div>
-                    <span class="pvp-actual"> $175 </span>
-                    <span class="pvp-anterior"> $250  </span>
-                    <br><br>
-                </div>
-                <p class="ahorro"> Ahorra 30%</p>
-                <p class="validez"> 30% de descuento</p>
-                <label for="btn-prom"   class="btn-anaranjado"> Obtener Promoción </label>
-            </div>
-        </div>
-    </section>
-    <section class="grupo">
-        <div class="tarjeta contenedor-tarjeta6">
-            <div class="cabecera verde">
-                <i class="fa-regular fa-calendar"></i>
-            </div>
-            <div class="contenido">
-                <h2>Membresía Anual Premium </h2>
-                <p class="descuento"> Paga 10 meses y recibe 12 meses de acceso total</p>
-                <div>
-                    <span class="pvp-actual"> $800 </span>
-                    <span class="pvp-anterior"> $960  </span>
-                </div>
-                <p class="ahorro"> Ahorra 17%</p>
-                <p class="validez"> 2 meses gratis</p>
-                <label for="btn-prom"  class="btn-verde"> Obtener Promoción </label>
-            </div>
-        </div>
-        <div class="tarjeta contenedor-tarjeta4">
-            <div class="cabecera morado">
-                <i class="fa-solid fa-bolt"></i>
-            </div>
-            <div class="contenido">
-                <h2>Clase de Prueba HIIT</h2>
-                <p class="descuento"> Una clase gratuita de alta intensidad con instructor</p>
-                <div>
-                    <span class="pvp-actual"> Gratis</span>
-                    <span class="pvp-anterior"> $25  </span>
-                    <br><br>
-                </div>
-                <p class="validez"> Para nuevos miembros</p>
-                <label for="btn-prom"  class="btn-morado"> Obtener Promoción </label>
-            </div>
-        </div>
-        <div class="tarjeta contenedor-tarjeta3">
-            <div class="cabecera amarillo">
-                <i class="fa-solid fa-users"></i>
-            </div>
-            <div class="contenido">
-                <h2>Plan Familiar </h2>
-                <p class="descuento"> Hasta 4 miembros de la familia por un solo precio</p>
-                <div>
-                    <span class="pvp-actual"> $200 </span>
-                    <span class="pvp-anterior"> $329  </span>
-                </div>
-                <p class="ahorro"> Ahorra 38%</p>
-                <p class="validez"> Válido en temporada de vacaciones </p>
-                <label for="btn-prom" class="btn-amarillo"> Obtener Promoción </label>
-            </div>
-        </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p class="texto"> Por el momento no hay promociones acivas</p>
+        <?php endif; ?>
+        
 
         <input type="checkbox" id="btn-prom">
         <div class="container-descripcion">
