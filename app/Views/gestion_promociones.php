@@ -18,9 +18,14 @@
                 <p>Administra las ofertas visibles en la página web</p>
             </div>
             <div>
-                <a href="<?= base_url('gestion/instructores') ?>">
-                    <input type="button" value="Instructores" class="btn-cambio">
-                </a>
+                <form name="navegador">
+                    <select name="secciones" class="select-nav" onchange="destino()">
+                        <option value="no">Seleccione  </option>
+                        <option value="<?= base_url('gestion/instructores') ?>">Gestión de Instructores</option>
+                        <option value="<?= base_url('gestion/clases') ?>">Gestión de Clases</option>
+                        <option value="<?= base_url('promociones/nuevo') ?>">Gestión de Promociones</option>
+                    </select>
+                </form>
                 <a href="<?= base_url('salir') ?>">
                     <input type="button" value="Cerrar Sesión" class="btn-salir">
                 </a>
@@ -72,26 +77,25 @@
                         <input type="text" name="precio_actual" id="precio_actual" placeholder="Ej: $40 o GRATIS" required>
                     </div>
                     <div class="campo2">
-                        <label for="precio_anterior">Precio Anterior (Se verá tachado)</label>
+                        <label for="precio_anterior">Precio Anterior</label>
                         <input type="text" name="precio_anterior" id="precio_anterior" placeholder="Ej: $80">
                     </div>
                     <div class="campo2">
-                        <label for="icono">Icono (FontAwesome)</label>
+                        <label for="icono">Icono</label>
                         <input type="text" name="icono" id="icono" placeholder="Ej: fa-solid fa-bolt" required>
                     </div>
 
                     <div class="campo2">
                         <label for="color_clase">Color de la Tarjeta</label>
                         <select name="color_clase" id="color_clase" required>
-                            <option value="azul">Azul (Principal)</option>
-                            <option value="verde">Verde (Premium)</option>
-                            <option value="morado">Morado (HIIT)</option>
-                            <option value="anaranjado">Anaranjado (Personal)</option>
-                            <option value="negro">Negro (Especial)</option>
-                            <option value="amarillo">Amarillo (Familiar)</option>
+                            <option value="azul">Azul</option>
+                            <option value="verde">Verde</option>
+                            <option value="morado">Morado</option>
+                            <option value="anaranjado">Anaranjado</option>
+                            <option value="negro">Negro</option>
+                            <option value="amarillo">Amarillo</option>
                         </select>
                     </div>
-
                     
                     <div class="campo2">
                         <label for="ahorro">Texto de Ahorro</label>
@@ -171,4 +175,5 @@
 <!-- Script usado en la página -->
 <?= $this->section('script') ?>
     <script src="<?= base_url('js/formulario.js') ?>"></script>
+    <script src="<?= base_url('js/navegacion.js') ?>"></script>
 <?= $this->endSection() ?>

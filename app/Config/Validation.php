@@ -21,9 +21,12 @@ class Validation extends BaseConfig
      * @var list<string>
      */
     public array $ruleSets = [
-        \CodeIgniter\Validation\Rules::class,
-        \App\Validation\CredentialRules::class, // <-- añadir
-    ];
+        \CodeIgniter\Validation\StrictRules\Rules::class,
+        \CodeIgniter\Validation\StrictRules\FormatRules::class,
+        \CodeIgniter\Validation\StrictRules\FileRules::class,
+        \CodeIgniter\Validation\StrictRules\CreditCardRules::class,
+        \App\Validation\CredentialRules::class,// <-- añadir
+        ];
 
     /**
      * Specifies the views that are used to display the

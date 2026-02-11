@@ -14,7 +14,7 @@
     <h1 class="titulo"> Nuestras Instalaciones</h1>
     <p class="texto">Tecnología de punta y espacios diseñados para maximizar tu rendimiento</p>
     <section class="grupo">
-        <div class="tarjeta contenedor-tarjeta1">
+        <div class="tarjeta contenedor-tarjeta-azul">
             <div class="cabecera azul">
                 <i class="fa-solid fa-dumbbell"></i>
             </div>
@@ -28,7 +28,7 @@
                 </ul>
             </div>
         </div>
-        <div class="tarjeta contenedor-tarjeta2">
+        <div class="tarjeta contenedor-tarjeta-negro">
             <div class="cabecera negro">
                 <i class="fa-regular fa-heart"></i>
             </div>
@@ -42,7 +42,7 @@
                 </ul>
             </div>
         </div>
-        <div class="tarjeta contenedor-tarjeta3">
+        <div class="tarjeta contenedor-tarjeta-amarillo">
             <div class="cabecera amarillo" >
                 <i class="fa-solid fa-water"></i>
             </div>
@@ -58,7 +58,7 @@
         </div>
     </section>
     <section class="grupo">
-        <div class="tarjeta contenedor-tarjeta4">
+        <div class="tarjeta contenedor-tarjeta-morado">
             <div class="cabecera morado">
                 <i class="fa-solid fa-users"></i>
             </div>
@@ -72,7 +72,7 @@
                 </ul>
             </div>
         </div>
-        <div class="tarjeta contenedor-tarjeta5">
+        <div class="tarjeta contenedor-tarjeta-anaranjado">
             <div class="cabecera anaranjado">
                 <i class="fa-solid fa-bolt"></i>
             </div>
@@ -86,7 +86,7 @@
                 </ul>
             </div>
         </div>
-        <div class="tarjeta contenedor-tarjeta6">
+        <div class="tarjeta contenedor-tarjeta-verde">
             <div class="cabecera verde">
                 <i class="fa-solid fa-wind"></i>
             </div>

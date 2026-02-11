@@ -15,10 +15,17 @@
         <div class="admin-encabezado">
             <div>
                 <h1>Panel de Administración</h1>
-                <p>Gestión de usuarios y membresías</p>
+                <p>Gestión de Clases</p>
             </div>
             <div>
-                
+                <form name="navegador">
+                    <select name="secciones" class="select-nav" onchange="destino()">
+                        <option value="no">Seleccione  </option>
+                        <option value="<?= base_url('gestion/instructores') ?>">Gestión de Instructores</option>
+                        <option value="<?= base_url('gestion/clases') ?>">Gestión de Clases</option>
+                        <option value="<?= base_url('promociones/nuevo') ?>">Gestión de Promociones</option>
+                    </select>
+                </form>
                 <a href="<?= base_url('salir') ?>">
                     <input type="button" value="Cerrar Sesión" class="btn-salir">
                 </a>
@@ -27,8 +34,8 @@
     
     <!-- Botones tipo pestañas para cambiar la vista -->
         <div class="pestañas">
-            <input type="button" class="activo2" id="registrar" value="Registrar Usuario">
-            <input type="button" id="gestionar" value="Gestionar Usuarios">
+            <input type="button" class="activo2" id="registrar" value="Registrar nuevas clases">
+            <input type="button" id="gestionar" value="Gestionar Clases">
         </div>
 
     <!-- Vista de una de las pestañas -->
@@ -47,9 +54,9 @@
         <?php endif; ?>
     <!-- Formulario de registro de usuarios -->
         <div id="content-reg" class="content">
-            <h2>Registrar Nuevo Usuario</h2>
+            <h2>Registrar Nueva Clase</h2>
 
-            <form method="POST" action="<?= base_url('panel/guardar') ?>" autocomplete="off">
+            <form method="POST" action="<?= base_url('clases/guardar') ?>" autocomplete="off">
             
                 <!-- Token de seguridad -->
                 <?= csrf_field(); ?>
@@ -57,70 +64,46 @@
             <!-- Campos para llenar -->
                 <div class="cuerpo2">
                     <div class="campo2">
-                        <label for="nombres">Nombre Completo</label>
-                        <input type="text" placeholder="Juan Alejandro" name="nombre" id="nombres" required>
+                        <label for="nombre">Nombre de la Clase</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Yoga Avanzado" required>
                     </div>
                     <div class="campo2">
-                        <label for="cedula">Cédula</label>
-                        <input type="text" placeholder="V-12345678" name="cedula" id="cedula" required>
+                        <label>Instructor Responsable</label>
+                        <select name="id_instructor" required>
+                            <option value="">Selecciona un instructor</option>
+                            <?php foreach($instructores as $instructor): ?>
+                                <option value="<?= $instructor['id'] ?>"><?= esc($instructor['nombre']) ?> - <?= esc($instructor['especialidad']) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="campo2">
+                        <label for="descripcion">Descripción de la Clase</label>
+                        <textarea name="descripcion" id="descripcion" placeholder="Explica brevemente de qué trata la clase..." rows="3"></textarea>
                     </div>
                     
                     <div class="campo2">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" placeholder="+58 412 248-5263" name="telefono" id="telefono" required>
-                    </div>
-                    <div class="campo2">
-                        <label for="id_plan">Tipo de Membresía:</label>
-                        <select id="id_plan" name="plan" required>
-                            <option value="">Selecciona una opción</option>
-
-                            <!-- optgroup para separar en categorías las opciones -->
-                            <optgroup label="Membresías Estándar">
-                                <option value="2">Mensualidad Básica</option>
-                                <option value="3">Plan Trimestral</option>
-                                <option value="4">Plan Semestral</option>
-                                <option value="5">Anualidad Regular</option>
+                        <label for="horario">Horario de la Clase</label>
+                        <select name="horario" id="horario" required>
+                            <option value="">Selecciona un bloque</option>
+                            <optgroup label="Turno Mañana">
+                                <option value="Lunes y Miércoles 7:00 AM">Lunes y Miércoles 7:00 AM</option>
+                                <option value="Lunes y Miércoles 9:00 AM">Lunes y Miércoles 9:00 AM</option>
+                                <option value="Martes y Jueves 8:00 AM">Martes y Jueves 8:00 AM</option>
                             </optgroup>
-                            <optgroup label="Promociones Activas">
-                                <option value="1">Promo 2x1 en membresías</option>
-                                <option value="6">Plan Familiar (4 personas)</option>
-                                <option value="7">Plan Personal Training</option>
-                                <option value="8">Anualidad Premium (Oferta)</option>
+                            <optgroup label="Turno Tarde/Noche">
+                                <option value="Lunes a Viernes 5:00 PM">Lunes a Viernes 5:00 PM</option>
+                                <option value="Martes y Jueves 6:00 PM">Martes y Jueves 6:00 PM</option>
+                                <option value="Sábados 9:00 AM">Sábados 9:00 AM (Especial)</option>
                             </optgroup>
                         </select>
                     </div>
-
-                    <!-- Campos para las personas beneficiadas (solo aparecen según el tipo de membresía) -->
-                    <div class="beneficiario" id="bnf2">
-                        <h3>Beneficiario 2</h3>
-                        <div class="fila">
-                            <input type="text" placeholder="Nombres" name="beneficiarios[nombre][]"/>
-                            <input type="text" placeholder="Cédula" name="beneficiarios[cedula][]"/>
-                            <input type="tel" placeholder="Teléfono" name="beneficiarios[telefono][]"/>
-                        </div>
-                    </div>
-                    <div class="beneficiario" id="bnf3">
-                        <h3>Beneficiario 3</h3>
-                        <div class="fila">
-                            <input type="text" placeholder="Nombres" name="beneficiarios[nombre][]"/>
-                            <input type="text" placeholder="Cédula" name="beneficiarios[cedula][]"/>
-                            <input type="tel" placeholder="Teléfono" name="beneficiarios[telefono][]"/>
-                        </div>
-                    </div>
-                    <div class="beneficiario" id="bnf4">
-                        <h3>Beneficiario 4</h3>
-                        <div class="fila">
-                            <input type="text" placeholder="Nombres" name="beneficiarios[nombre][]"/>
-                            <input type="text" placeholder="Cédula" name="beneficiarios[cedula][]"/>
-                            <input type="tel" placeholder="Teléfono" name="beneficiarios[telefono][]"/>
-                        </div>
-                    </div>
                     <div class="campo2">
-                        <label for="fecha_pago">Fecha de Pago</label>
-                        <input type="date" id="fecha_pago" name="fecha_pago" required>
+                        <label for="cupos_max">Capacidad Máxima (Cupos)</label>
+                        <input type="number" name="cupos_max" id="cupos_max" placeholder="Ej: 20" min="1" required>
                     </div>
+                    
                     <div class="rgtr">
-                        <input type="submit" value="Registrar Usuario"/>
+                        <input type="submit" value="Registrar Clase Nueva"/>
                     </div>
                 </div>
             </form>
@@ -130,63 +113,57 @@
      <!-- Lista de personas registradas -->
         <div id="content-gstn" class="gestionar content">
             <div class="encabezado-tabla">
-                <h2>Listado de Miembros</h2>
-                <input type="text" placeholder="Buscar usuario" class="buscador">
+                <h2>Listado de Clases Activas</h2>
+                
             </div>
         <!-- Encabezado de la tabla -->
-
             
             <table>
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Nombre</th>
-                        <th>Cédula de Identidad</th>
-                        <th>Télefono</th>
-                        <th>Tipo de Plan</th>
-                        <th>Estado de Pago</th>
-                        <th>Fecha de Pago</th>
+                        <th>Clase</th>
+                        <th>Instructor</th>
+                        <th>Descripción</th>
+                        <th>Horario</th>
+                        <th>Cupos Max.</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                 <!--Tabla dinámica -->
-                <?php if (!empty($socios)): ?>
-                    <?php foreach ($socios as $socio): ?>
+                <?php if (!empty($clases)): ?>
+                    <?php foreach ($clases as $clase): ?>
                     <tr>
-                        <td><?= esc($socio['id']) ?></td>
-                        <td><?= esc($socio['nombre']) ?></td>
-                        <td><?= esc($socio['cedula']) ?></td>
-                        <td><?= esc($socio['telefono']) ?></td>
-                        <td>
-                            <?php if ($socio['socio_principal_id']): ?>
-                                Beneficiario
-                            <?php else: ?>
-                                <?= esc($socio['nombre_plan'] ?? $socio['plan']) ?>
-                            <?php endif; ?>
-                        </td>
-                        <td><?= esc($socio['estado_pago']) ?></td>
-                        <td><?= esc($socio['fecha_pago']) ?></td>
+                        <td><?= esc($clase['id']) ?></td>
+                        <td><?= esc($clase['nombre']) ?></td>
+                        <td><?= esc($clase['nombre_instructor']) ?></td>
+                        <td><?= esc($clase['descripcion']) ?>
+                        <td><?= esc($clase['horario']) ?></td>
+                        <td><?= esc($clase['cupos_max']) ?> </td>
+                        
                         
                         <td class="actions">
-                            <a href="<?= base_url('socios/editar/' . $socio['id']) ?>" class="btn-edit"  onclick="return confirm('¿Estás seguro de que quieres editar a <?= esc($socio['nombre']) ?>? "> Editar </a>
-                            <a href="<?= base_url('socios/eliminar/' . $socio['id']) ?>" class="btn-eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar a <?= esc($socio['nombre']) ?>? Esta acción no se puede deshacer');"> Eliminar </a>
+                            <a href="<?= base_url('gestion/clases/inscritos/' . $clase['id']) ?>" class="btn-inscripcion">Ver Inscritos</a>
+                            <a href="<?= base_url('clases/editar/' . $clase['id']) ?>" class="btn-edit"  onclick="return confirm('¿Estás seguro de que quieres editar la clase? "> Editar </a>
+                            <a href="<?= base_url('clases/eliminar/' . $clase['id']) ?>" class="btn-eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar la clase? Esta acción no se puede deshacer');"> Eliminar </a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <tr>
-                        <td colspan="10">Todavía no se ha cargado a nadie</td>
+                        <td colspan="6">No hay clases en el sistema</td>
                     </tr>
                 <?php endif; ?>
-                </tbody>
-            </table>
-        </div>
-        
+            </tbody>
+        </table>
     </div>
+        
+</div>
 <?= $this->endSection() ?>
 
 <!-- Script usado en la página -->
 <?= $this->section('script') ?>
     <script src="<?= base_url('js/formulario.js') ?>"></script>
+    <script src="<?= base_url('js/navegacion.js') ?>"></script>
 <?= $this->endSection() ?>

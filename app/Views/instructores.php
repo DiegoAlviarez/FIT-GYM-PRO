@@ -25,7 +25,7 @@
                         <h4><?= esc($instructor['especialidad']) ?></h4>
                         <p><?= esc($instructor['descripcion']) ?></p>
                         <p>
-                            <i class="fa-solid fa-medal"></i><?= esc($instructor['experiencia']) ?> 8 años de experiencia 
+                            <i class="fa-solid fa-medal"></i><?= esc($instructor['experiencia']) ?> años de experiencia 
                         </p>
                         <div class="contenedor-tags">
                             <?php

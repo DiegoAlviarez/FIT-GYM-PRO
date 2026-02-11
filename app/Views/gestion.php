@@ -18,7 +18,6 @@
                 <p>Gestión de usuarios y membresías</p>
             </div>
             <div>
-                
                 <a href="<?= base_url('salir') ?>">
                     <input type="button" value="Cerrar Sesión" class="btn-salir">
                 </a>
@@ -46,7 +45,7 @@
             </div>
         <?php endif; ?>
     <!-- Formulario de registro de usuarios -->
-        <div id="content-reg" class="content">
+        <div id="content-reg" class="content centrado">
             <h2>Registrar Nuevo Usuario</h2>
 
             <form method="POST" action="<?= base_url('panel/guardar') ?>" autocomplete="off">
@@ -58,16 +57,16 @@
                 <div class="cuerpo2">
                     <div class="campo2">
                         <label for="nombres">Nombre Completo</label>
-                        <input type="text" placeholder="Juan Alejandro" name="nombre" id="nombres" required>
+                        <input type="text" placeholder="Ej: Juan Alejandro" name="nombre" id="nombres" required>
                     </div>
                     <div class="campo2">
                         <label for="cedula">Cédula</label>
-                        <input type="text" placeholder="V-12345678" name="cedula" id="cedula" required>
+                        <input type="text" placeholder="Ej: V-12345678" name="cedula" id="cedula" required>
                     </div>
                     
                     <div class="campo2">
                         <label for="telefono">Teléfono</label>
-                        <input type="tel" placeholder="+58 412 248-5263" name="telefono" id="telefono" required>
+                        <input type="tel" placeholder="Ej: +58 412 248-5263" name="telefono" id="telefono" required>
                     </div>
                     <div class="campo2">
                         <label for="id_plan">Tipo de Membresía:</label>
@@ -85,7 +84,7 @@
                                 <option value="1">Promo 2x1 en membresías</option>
                                 <option value="6">Plan Familiar (4 personas)</option>
                                 <option value="7">Plan Personal Training</option>
-                                <option value="8">Anualidad Premium (Oferta)</option>
+                                <option value="8">Anualidad (Oferta)</option>
                             </optgroup>
                         </select>
                     </div>
@@ -131,7 +130,6 @@
         <div id="content-gstn" class="gestionar content">
             <div class="encabezado-tabla">
                 <h2>Listado de Miembros</h2>
-                <input type="text" placeholder="Buscar usuario" class="buscador">
             </div>
         <!-- Encabezado de la tabla -->
 
@@ -169,8 +167,9 @@
                         <td><?= esc($socio['fecha_pago']) ?></td>
                         
                         <td class="actions">
-                            <a href="<?= base_url('socios/editar/' . $socio['id']) ?>" class="btn-edit"  onclick="return confirm('¿Estás seguro de que quieres editar a <?= esc($socio['nombre']) ?>? "> Editar </a>
+                            <a href="<?= base_url('socios/editar/' . $socio['id']) ?>" class="btn-edit" onclick="return confirm('¿Estás seguro de que quieres editar a <?= esc($socio['nombre']) ?>?');"> Editar </a>
                             <a href="<?= base_url('socios/eliminar/' . $socio['id']) ?>" class="btn-eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar a <?= esc($socio['nombre']) ?>? Esta acción no se puede deshacer');"> Eliminar </a>
+                            <a href="<?= base_url('socios/inscripcion/' . $socio['id']) ?>" class="btn-inscripcion"> Inscribir en una clase </a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

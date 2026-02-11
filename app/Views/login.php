@@ -23,12 +23,12 @@
 
             <div class="campo">
                 <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" value="<?= old('email') ?>" required placeholder="ejemplo@correo.com">
+                <input type="email" id="email" maxlength="40" name="email" value="<?= old('email') ?>" required placeholder="ejemplo@correo.com">
             </div>
 
             <div class="campo">
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required placeholder="********">
+                <input type="password" id="password" maxlength="10" name="password" required placeholder="********">
             </div>
 
             

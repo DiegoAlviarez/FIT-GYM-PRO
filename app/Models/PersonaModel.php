@@ -83,8 +83,7 @@ public function registrarSocioCompleto($dataPrincipal, $beneficiariosPost)
     public function getInstructores()
     {
         // Ajusta el 'rol' según como se guarde
-        return $this->where('rol', 'empleado')
-                    ->orWhere('especialidad !=', null)
+        return $this->where('rol', 'instructor')
                     ->findAll();
     }
     

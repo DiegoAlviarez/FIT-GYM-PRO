@@ -44,8 +44,8 @@
         <input type="checkbox" id="btn-prom">
         <div class="container-descripcion">
             <div class="content-descripcion">
-                <h2>Nueva Promo</h2>
-                <p>Activa tu cuenta con nosotros</p>
+                <h2>Activa la Promoción</h2>
+                <p>Comunicáte con nosotros y forma parte de nuestra familia. +414 - 4436461</p>
                 <div class="btn-cerrarDescripcion">
                     <label for="btn-prom"> Cerrar </label>
                 </div>

@@ -21,15 +21,15 @@
     </div>
     <div class="contenedor">
         <div class="tarjetas"> 
-            <h3> 500+ </h3>
+            <h3> <?= ($totalActivos ?? 0) ?>+</h3>
             <p>Miembros Activos</p>
         </div>
         <div class="tarjetas"> 
-            <h3> 15+ </h3>
+            <h3> <?= ($totalInstructores ?? 0) ?></h3>
             <p>Instructores</p>
         </div>
         <div class="tarjetas"> 
-            <h3> 24/7 </h3>
+            <h3> Lun-Sáb </h3>
             <p>Acceso</p>
         </div>
     </div>

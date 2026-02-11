@@ -17,9 +17,14 @@
                 <p>Gestión de usuarios y membresías</p>
             </div>
             <div>
-                <a href="<?= base_url('promociones/nuevo') ?>">
-                    <input type="button" value="Nueva Promoción" class="btn-cambio">
-                </a>
+                <form name="navegador">
+                    <select name="secciones" class="select-nav" onchange="destino()">
+                        <option value="no">Seleccione  </option>
+                        <option value="<?= base_url('gestion/instructores') ?>">Gestión de Instructores</option>
+                        <option value="<?= base_url('gestion/clases') ?>">Gestión de Clases</option>
+                        <option value="<?= base_url('promociones/nuevo') ?>">Gestión de Promociones</option>
+                    </select>
+                </form>
                 <a href="<?= base_url('salir') ?>">
                     <input type="button" value="Cerrar Sesión" class="btn-salir">
                 </a>
@@ -62,7 +67,7 @@
                 <div class="cuerpo2">
                     <div class="campo2">
                         <label for="nombre">Nombre Completo</label>
-                        <input type="text" placeholder="Juan Alejandro" name="nombre" id="nombre" required>
+                        <input type="text" placeholder="Ej: Juan Alejandro" name="nombre" id="nombre" required>
                     </div>
                     <div class="campo2">
                         <label for="especialidad">Especialidad</label>
@@ -78,19 +83,24 @@
                     </div>
                     <div class="campo2">
                         <label for="biografia">Biografía:</label>
-                        <textarea placeholder="Historia del Instructor" name="biografia" id="biografia" required></textarea>
+                        <textarea placeholder="Ej: Historia del Instructor" name="biografia" id="biografia" required></textarea>
                     </div>
                     <div class="campo2" >
                         <label for="certificaciones">Certificaciones (Separa con comas)</label>
                         <input type="text" name="certificaciones" id="certificaciones" placeholder="Ej: NSCA, CrossFit Nivel 2, TRX">
                     </div>
                     <div class="campo2">
-                        <label for="horario_disponibilidad">Horario Disponible</label>
-                        <input type="text" placeholder="Ej: Lun - Vie: 07:00 AM - 01:00 PM" name="horario_disponibilidad" id="horario_disponibilidad" required>
+                        <label for="horario">Horario de Trabajo:</label>
+                        <select name="horario" id="horario" required>
+                            <option value="Mañana (07:00 AM - 12:00 PM)">Mañana (07:00 AM - 12:00 PM)</option>
+                            <option value="Tarde (01:00 PM - 06:00 PM)">Tarde (01:00 PM - 06:00 PM)</option>
+                            <option value="Noche (06:00 PM - 10:00 PM)">Noche (06:00 PM - 10:00 PM)</option>
+                            <option value="Tiempo Completo">Tiempo Completo</option>
+                        </select>
                     </div>
                     <div class="campo2">
                         <label for="telefono">Número de Teléfono</label>
-                        <input type="tel" placeholder="0412-1234567" name="telefono" id="telefono" required>
+                        <input type="tel" placeholder="Ej: 0412-1234567" name="telefono" id="telefono" required>
                     </div>
                     <div class="campo2">
                         <label for="foto">Foto del Instructor:</label>
@@ -116,7 +126,7 @@
                         <th>Id</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
-                        <th>Biografía</th>
+                        <th class="ancho">Biografía</th>
                         <th>Especialidad</th>
                         <th>Experiencia</th>
                         <th>Certificaciones</th>
@@ -133,7 +143,7 @@
                             <td><?= esc($instructor['id']) ?></td>
                             <td><?= esc($instructor['nombre']) ?></td>
                             <td><?= esc($instructor['descripcion']) ?></td>
-                            <td><?= esc($instructor['biografia']) ?></td>
+                            <td class="ancho"><?= esc($instructor['biografia']) ?></td>
                             <td><?= esc($instructor['especialidad']) ?></td>
                             <td><?= esc($instructor['experiencia']) ?></td>
                             <td><?= esc($instructor['certificaciones']) ?></td>
@@ -159,4 +169,5 @@
 
 <?= $this->section('script') ?>
     <script src="<?= base_url('js/formulario.js') ?>"></script>
+    <script src="<?= base_url('js/navegacion.js') ?>"></script>
 <?= $this->endSection() ?>

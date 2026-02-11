@@ -9,8 +9,19 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('index');
+    $personaModel = new PersonaModel();
+
+    $data['totalActivos'] = $personaModel->where('estado_pago', 'activo')
+                                         ->where('rol', 'socio')
+                                         ->countAllResults();
+
+    
+    $data['totalInstructores'] = $personaModel->where('rol', 'instructor')
+                                               ->countAllResults();
+
+    return view('index', $data); // Tu vista pública
     }
+    
 
     public function verInstalaciones(){
         return view('instalaciones');
