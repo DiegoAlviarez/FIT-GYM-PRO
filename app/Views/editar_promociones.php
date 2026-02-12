@@ -1,6 +1,6 @@
 
 <!-- Llamado a la plantilla que se está usando -->
-<?= $this->extend('layouts\plantilla') ?> 
+<?= $this->extend('layouts/plantilla') ?> 
 
 <!-- Título de la página -->
 <?= $this->section('titulo') ?>
@@ -23,24 +23,24 @@
                 <div class="cuerpo2">
                     <div class="campo2">
                         <label for="titulo">Título de la Promoción</label>
-                        <input type="text" name="titulo" id="titulo" value="<?= esc($promocion['titulo']) ?>" placeholder="Ej: 2x1 en Membresías" required>
+                        <input type="text" name="titulo" id="titulo" maxlength="30" value="<?= esc($promocion['titulo']) ?>" placeholder="Ej: 2x1 en Membresías" required>
                     </div>
                     <div class="campo2">
                         <label for="subtitulo">Descripción Corta </label>
-                        <input type="text" name="subtitulo" id="subtitulo" value="<?= esc($promocion['subtitulo']) ?>" placeholder="Ej: Trae un amigo y ahorra..." required>
+                        <input type="text" name="subtitulo" id="subtitulo" maxlength="80" value="<?= esc($promocion['subtitulo']) ?>" placeholder="Ej: Trae un amigo y ahorra..." required>
                     </div>
                     
                     <div class="campo2">
                         <label for="precio_actual">Precio de Oferta</label>
-                        <input type="text" name="precio_actual" id="precio_actual" value="<?= esc($promocion['precio_actual']) ?>" placeholder="Ej: $40 o GRATIS" required>
+                        <input type="text" name="precio_actual" id="precio_actual" maxlength="20" value="<?= esc($promocion['precio_actual']) ?>" placeholder="Ej: $40 o GRATIS" required>
                     </div>
                     <div class="campo2">
                         <label for="precio_anterior">Precio Anterior (Se verá tachado)</label>
-                        <input type="text" name="precio_anterior" id="precio_anterior" value="<?= esc($promocion['precio_anterior']) ?>" placeholder="Ej: $80">
+                        <input type="text" name="precio_anterior" id="precio_anterior" maxlength="20" value="<?= esc($promocion['precio_anterior']) ?>" placeholder="Ej: $80">
                     </div>
                     <div class="campo2">
                         <label for="icono">Icono (FontAwesome)</label>
-                        <input type="text" name="icono" id="icono" value="<?= esc($promocion['icono']) ?>" placeholder="Ej: fa-solid fa-bolt" required>
+                        <input type="text" name="icono" id="icono" maxlength="50" value="<?= esc($promocion['icono']) ?>" placeholder="Ej: fa-solid fa-bolt" required>
                     </div>
 
                     <div class="campo2">
@@ -59,11 +59,11 @@
                     
                     <div class="campo2">
                         <label for="ahorro">Texto de Ahorro</label>
-                        <input type="text" name="ahorro" value="<?= esc($promocion['ahorro']) ?>" placeholder="Ej: Ahorra 50%">
+                        <input type="text" name="ahorro" maxlength="30" value="<?= esc($promocion['ahorro']) ?>" placeholder="Ej: Ahorra 50%">
                     </div>
                     <div class="campo2">
                         <label for="validez">Validez</label>
-                        <input type="text" name="validez" value="<?= esc($promocion['validez']) ?>" placeholder="Ej: Válido hasta fin de mes">
+                        <input type="text" name="validez" maxlength="30" value="<?= esc($promocion['validez']) ?>" placeholder="Ej: Válido hasta fin de mes">
                     </div>
                     <div class="campo2">
                         <label for="estado">Estado</label>

@@ -30,15 +30,15 @@
             <div class="cuerpo2">
                 <div class="campo2">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" value="<?= esc($socio['nombre']) ?>" id="nombre" required>
+                    <input type="text" name="nombre" maxlength="50" value="<?= esc($socio['nombre']) ?>" id="nombre" required>
                 </div>
                 <div class="campo2">
                     <label for="cedula">Cédula</label>
-                    <input type="text" name="cedula" value="<?= esc($socio['cedula']) ?>" id="cedula" required>
+                    <input type="text" name="cedula" maxlength="12" value="<?= esc($socio['cedula']) ?>" id="cedula" required>
                 </div>
                 <div class="campo2">
                     <label for="telefono">Teléfono</label>
-                    <input type="tel" name="telefono" id="telefono" value="<?= esc($socio['telefono']) ?>" required>
+                    <input type="tel" name="telefono" maxlength="11" id="telefono" value="<?= esc($socio['telefono']) ?>" required>
                 </div>
 
                 <!-- Campos que no se pueden editar (le corresponde al principal) -->

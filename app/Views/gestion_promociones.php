@@ -1,6 +1,6 @@
 
 <!-- Llamado a la plantilla que se está usando -->
-<?= $this->extend('layouts\plantilla') ?> 
+<?= $this->extend('layouts/plantilla') ?> 
 
 <!-- Título de la página -->
 <?= $this->section('titulo') ?>
@@ -65,24 +65,24 @@
                 <div class="cuerpo2">
                     <div class="campo2">
                         <label for="titulo">Título de la Promoción</label>
-                        <input type="text" name="titulo" id="titulo" placeholder="Ej: 2x1 en Membresías" required>
+                        <input type="text" name="titulo" id="titulo" maxlength="30" placeholder="Ej: 2x1 en Membresías" required>
                     </div>
                     <div class="campo2">
                         <label for="subtitulo">Descripción Corta </label>
-                        <input type="text" name="subtitulo" id="subtitulo" placeholder="Ej: Trae un amigo y ahorra..." required>
+                        <input type="text" name="subtitulo" id="subtitulo" maxlength="80" placeholder="Ej: Trae un amigo y ahorra..." required>
                     </div>
                     
                     <div class="campo2">
                         <label for="precio_actual">Precio de Oferta</label>
-                        <input type="text" name="precio_actual" id="precio_actual" placeholder="Ej: $40 o GRATIS" required>
+                        <input type="text" name="precio_actual" id="precio_actual" maxlength="20" placeholder="Ej: $40 o GRATIS" required>
                     </div>
                     <div class="campo2">
                         <label for="precio_anterior">Precio Anterior</label>
-                        <input type="text" name="precio_anterior" id="precio_anterior" placeholder="Ej: $80">
+                        <input type="text" name="precio_anterior" id="precio_anterior" maxlength="20" placeholder="Ej: $80">
                     </div>
                     <div class="campo2">
                         <label for="icono">Icono</label>
-                        <input type="text" name="icono" id="icono" placeholder="Ej: fa-solid fa-bolt" required>
+                        <input type="text" name="icono" id="icono" maxlength="50" placeholder="Ej: fa-solid fa-bolt" required>
                     </div>
 
                     <div class="campo2">
@@ -99,11 +99,11 @@
                     
                     <div class="campo2">
                         <label for="ahorro">Texto de Ahorro</label>
-                        <input type="text" name="ahorro" placeholder="Ej: Ahorra 50%">
+                        <input type="text" name="ahorro" maxlength="30" placeholder="Ej: Ahorra 50%">
                     </div>
                     <div class="campo2">
                         <label for="validez">Validez</label>
-                        <input type="text" name="validez" placeholder="Ej: Válido hasta fin de mes">
+                        <input type="text" name="validez" maxlength="30" placeholder="Ej: Válido hasta fin de mes">
                     </div>
                     <div class="rgtr">
                         <input type="submit" value="Publicar Promoción"/>
@@ -117,7 +117,6 @@
         <div id="content-gstn" class="gestionar content">
             <div class="encabezado-tabla">
                 <h2>Listado de Promociones</h2>
-                <input type="text" placeholder="Buscar usuario" class="buscador">
             </div>
         <!-- Encabezado de la tabla -->
 

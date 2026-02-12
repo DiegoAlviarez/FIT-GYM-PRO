@@ -10,7 +10,7 @@
     <?= $this->renderSection('titulo') ?>
 
     <!-- Enlace con los estilos e iconos que se van a usar -->
-    <link href="<?= base_url('estilos/estilo.css') ?>" rel="stylesheet"/>
+    <link href="<?= base_url('estilos/estilo.css?v=1.2') ?>" rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
     <script src="https://kit.fontawesome.com/00a1f99971.js" crossorigin="anonymous"></script>
     
@@ -50,17 +50,16 @@
                 <div class="footer-columna">
                     <h3>Contacto</h3>
                     <ul>
-                        <li><i class="fa-solid fa-phone"></i> xxxxxxxxx </li>
-                        <li><i class="fa-regular fa-envelope"></i> xxxxxxxxx </li>                      
-                        <li><i class="fa-solid fa-location-dot"></i> xxxxxxxx </li>
+                        <li><i class="fa-solid fa-phone"></i> 0414-4436461 </li>
+                        <li><i class="fa-regular fa-envelope"></i> admin@fitgympro.com </li>                      
+                        <li><i class="fa-solid fa-location-dot"></i> Venezuela, La guaira, Maiquetía </li>
                     </ul>
                 </div>
                 <div class="footer-columna">
                     <h3>Horarios</h3>
                     <ul>
-                        <li>Lunes - Viernes: 6:00 - 23:00</li>
-                        <li>Sábados: 8:00 - 21:00</li>
-                        <li>Domingos: 9:00 - 20:00</li>
+                        <li>Lunes - Viernes: 7:00 - 22:00</li>
+                        <li>Sábados: 9:00 - 22:00</li>
                     </ul>
                 </div>
                 <div class="footer-columna">

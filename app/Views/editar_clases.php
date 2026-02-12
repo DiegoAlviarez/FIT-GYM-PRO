@@ -1,6 +1,6 @@
 
 <!-- Llamado a la plantilla que se está usando -->
-<?= $this->extend('layouts\plantilla') ?> 
+<?= $this->extend('layouts/plantilla') ?> 
 
 <!-- Título de la página -->
 <?= $this->section('titulo') ?>
@@ -22,7 +22,7 @@
                 <div class="cuerpo2">
                     <div class="campo2">
                         <label for="nombre">Nombre de la Clase</label>
-                        <input type="text" id="nombre" name="nombre" value="<?= esc($clase['nombre']) ?>" placeholder="Ej: Yoga Avanzado" required>
+                        <input type="text" id="nombre" name="nombre" maxlength="50" value="<?= esc($clase['nombre']) ?>" placeholder="Ej: Yoga Avanzado" required>
                     </div>
                     <div class="campo2">
                         <label>Instructor Responsable</label>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="campo2">
                         <label for="descripcion">Descripción de la Clase</label>
-                        <textarea name="descripcion" id="descripcion" rows="3"><?= esc($clase['descripcion']) ?></textarea>
+                        <textarea name="descripcion" id="descripcion" maxlength="250" rows="3"><?= esc($clase['descripcion']) ?></textarea>
                     </div>
                     
                     <div class="campo2">
@@ -56,11 +56,11 @@
                     </div>
                     <div class="campo2">
                         <label for="cupos_max">Capacidad Máxima (Cupos)</label>
-                        <input type="number" name="cupos_max" value="<?= esc($clase['cupos_max']) ?>" id="cupos_max" placeholder="Ej: 20" min="1" required>
+                        <input type="number" name="cupos_max" maxlength="10" value="<?= esc($clase['cupos_max']) ?>" id="cupos_max" placeholder="Ej: 20" min="1" required>
                     </div>
                     
-                    <div class="rgtr">
-                        <input type="submit" value="Guardar Cambios"/>
+                    <div class="rgtr-edit">
+                        <input class="btns-editar" type="submit" value="Guardar Cambios"/>
                         <a href="<?= base_url('clases/nuevo') ?>" class="btns-editar" onclick="return confirm('¿Seguro que desea retroceder? No se guardaran los cambios')"> Regresar </a>
                     </div>
                 </div>

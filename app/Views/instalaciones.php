@@ -1,6 +1,6 @@
 
 <!-- Llamado a la plantilla que se está usando -->
-<?= $this->extend('layouts\plantilla') ?>
+<?= $this->extend('layouts/plantilla') ?>
 
 <!-- Título de la página -->
 <?= $this->section('titulo') ?>
@@ -104,7 +104,7 @@
     <section class="grupo">
         <div class="tarjeta2">
             <figure>
-                <img src="<?=  base_url('imagenes/imagen2.jpg') ?>" alt="gym" title="Gym">
+                <img src="<?=  base_url('imagenes/motivador.jpeg') ?>" alt="gym" title="Gym">
             </figure>
             <div>
                 <h2>Ambiente Motivador</h2>
@@ -113,7 +113,7 @@
         </div>
         <div class="tarjeta2">
             <figure>
-                <img src="<?= base_url('imagenes/imagen3.jpg') ?>" alt="gym2">
+                <img src="<?= base_url('imagenes/imagen2.jpg') ?>" alt="gym2">
             </figure>
             <div>
                 <h2>Equipamiento Moderno</h2>

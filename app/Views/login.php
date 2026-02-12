@@ -1,4 +1,4 @@
-<?=  $this->extend('layouts\plantilla') ?>
+<?=  $this->extend('layouts/plantilla') ?>
 
 <?= $this->section('titulo') ?>
     <title>Login | FitGymPro</title>

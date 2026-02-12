@@ -1,6 +1,6 @@
 
 <!-- Llamado a la plantilla que se está usando -->
-<?= $this->extend('layouts\plantilla') ?> 
+<?= $this->extend('layouts/plantilla') ?> 
 
 <!-- Título de la página -->
 <?= $this->section('titulo') ?>
@@ -57,16 +57,16 @@
                 <div class="cuerpo2">
                     <div class="campo2">
                         <label for="nombres">Nombre Completo</label>
-                        <input type="text" placeholder="Ej: Juan Alejandro" name="nombre" id="nombres" required>
+                        <input type="text" placeholder="Ej: Juan Alejandro" maxlength="70" name="nombre" id="nombres" required>
                     </div>
                     <div class="campo2">
                         <label for="cedula">Cédula</label>
-                        <input type="text" placeholder="Ej: V-12345678" name="cedula" id="cedula" required>
+                        <input type="text" placeholder="Ej: V-12345678" maxlength="12" name="cedula" id="cedula" required>
                     </div>
                     
                     <div class="campo2">
                         <label for="telefono">Teléfono</label>
-                        <input type="tel" placeholder="Ej: +58 412 248-5263" name="telefono" id="telefono" required>
+                        <input type="tel" placeholder="Ej: 04122485263" maxlength="11" name="telefono" id="telefono" required>
                     </div>
                     <div class="campo2">
                         <label for="id_plan">Tipo de Membresía:</label>
@@ -188,4 +188,5 @@
 <!-- Script usado en la página -->
 <?= $this->section('script') ?>
     <script src="<?= base_url('js/formulario.js') ?>"></script>
+    <script src="<?= base_url('js/buscador.js') ?>"></script>
 <?= $this->endSection() ?>

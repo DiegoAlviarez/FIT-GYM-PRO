@@ -1,6 +1,6 @@
 
 <!-- Llamado a la plantilla que se está usando -->
-<?= $this->extend('layouts\plantilla') ?> 
+<?= $this->extend('layouts/plantilla') ?> 
 
 <!-- Título de la página -->
 <?= $this->section('titulo') ?>
@@ -65,7 +65,7 @@
                 <div class="cuerpo2">
                     <div class="campo2">
                         <label for="nombre">Nombre de la Clase</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Yoga Avanzado" required>
+                        <input type="text" id="nombre" name="nombre" maxlength="50" placeholder="Ej: Yoga Avanzado" required>
                     </div>
                     <div class="campo2">
                         <label>Instructor Responsable</label>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="campo2">
                         <label for="descripcion">Descripción de la Clase</label>
-                        <textarea name="descripcion" id="descripcion" placeholder="Explica brevemente de qué trata la clase..." rows="3"></textarea>
+                        <textarea name="descripcion" id="descripcion" maxlength="250" placeholder="Explica brevemente de qué trata la clase..." rows="3"></textarea>
                     </div>
                     
                     <div class="campo2">
@@ -99,7 +99,7 @@
                     </div>
                     <div class="campo2">
                         <label for="cupos_max">Capacidad Máxima (Cupos)</label>
-                        <input type="number" name="cupos_max" id="cupos_max" placeholder="Ej: 20" min="1" required>
+                        <input type="number" name="cupos_max" id="cupos_max" maxlength="10" placeholder="Ej: 20" min="1" required>
                     </div>
                     
                     <div class="rgtr">

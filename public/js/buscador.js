@@ -65,22 +65,19 @@ function buscarUsuario() {
         telefonoUsuario.textContent = usuario.telefono || 'No registrado';
         membresiaUsuario.textContent = usuario.plan;
         validezUsuario.textContent = usuario.fecha;
-        
-        // Imagen por defecto si no tiene foto
-        //fotoUsuario.src = usuario.foto ? `uploads/${usuario.foto}` : "https://via.placeholder.com/150";
+    
 
         // Validar estado para aplicar clases CSS
-        // Ajustado a los valores de tu ENUM de base de datos: 'Al día' o 'Pendiente'
         estado.classList.remove("activa", "expirada");
 
         if (usuario.estado === "Al día") {
             estado.classList.add("activa");
             textoEstado.textContent = "Al día";
-            estado.style.backgroundColor = "#d4edda"; // Verde opcional
+            estado.style.backgroundColor = "#d4edda"; 
         } else {
             estado.classList.add("expirada");
             textoEstado.textContent = "Pendiente";
-            estado.style.backgroundColor = "#f8d7da"; // Rojo opcional
+            estado.style.backgroundColor = "#f8d7da"; 
         }
     })
     .catch((error) => {
@@ -93,13 +90,41 @@ function buscarUsuario() {
     });
 }
 
-// Configurar el evento del teclado
-const inputBuscar = document.getElementById('buscar');
-if (inputBuscar) {
-    inputBuscar.addEventListener("keypress", (e) => {
-        if (e.key === "Enter") {
-            e.preventDefault();
-            buscarUsuario();
+
+
+function formatearCedula(e) {
+    let valor = e.target.value.replace(/\D/g, ""); 
+    if (valor.length > 8) valor = valor.slice(0, 8);
+    let conPuntos = valor.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+
+    if (valor.length > 0) {
+        e.target.value = "V-" + conPuntos;
+    } else {
+        e.target.value = "";
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Lista de formato de cédula
+    const camposCedula = ['buscar', 'cedula'];
+
+    camposCedula.forEach(id => {
+        const input = document.getElementById(id);
+        
+        if (input) {
+            // usar el formato
+            input.addEventListener("input", formatearCedula);
+
+            // activar si es el campo buscar
+            if (id === 'buscar') {
+                input.addEventListener("keypress", (e) => {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        buscarUsuario();
+                    }
+                });
+            }
         }
     });
-}
+});

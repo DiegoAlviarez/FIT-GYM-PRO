@@ -1,5 +1,5 @@
 <!-- Llamado a la plantilla que se está usando -->
-<?= $this->extend('layouts\plantilla') ?>
+<?= $this->extend('layouts/plantilla') ?>
 
 <!-- Título de la página -->
 <?= $this->section('titulo') ?>
@@ -67,27 +67,27 @@
                 <div class="cuerpo2">
                     <div class="campo2">
                         <label for="nombre">Nombre Completo</label>
-                        <input type="text" placeholder="Ej: Juan Alejandro" name="nombre" id="nombre" required>
+                        <input type="text" placeholder="Ej: Juan Alejandro" maxlength="50" name="nombre" id="nombre" required>
                     </div>
                     <div class="campo2">
                         <label for="especialidad">Especialidad</label>
-                        <input type="text" name="especialidad" id="especialidad" placeholder="Ej: Entrenamiento Funcional" required>
+                        <input type="text" name="especialidad" id="especialidad" maxlength="50" placeholder="Ej: Entrenamiento Funcional" required>
                     </div>
                     <div class="campo2">
                         <label for="experiencia">Años de Experiencia</label>
-                        <input type="text" name="experiencia" id="experiencia" min="0" placeholder="Ej: 8 años">
+                        <input type="text" name="experiencia" id="experiencia" maxlength="10" min="0" placeholder="Ej: 8 años">
                     </div>
                     <div class="campo2">
                         <label for="descripcion">Descripción Profesional:</label>
-                        <input type="text" placeholder="Ej: Especialista en ..." name="descripcion" id="descripcion" required>
+                        <input type="text" placeholder="Ej: Especialista en ..." maxlength="60" name="descripcion" id="descripcion" required>
                     </div>
                     <div class="campo2">
                         <label for="biografia">Biografía:</label>
-                        <textarea placeholder="Ej: Historia del Instructor" name="biografia" id="biografia" required></textarea>
+                        <textarea placeholder="Ej: Historia del Instructor" maxlength="1000" name="biografia" id="biografia" required></textarea>
                     </div>
                     <div class="campo2" >
                         <label for="certificaciones">Certificaciones (Separa con comas)</label>
-                        <input type="text" name="certificaciones" id="certificaciones" placeholder="Ej: NSCA, CrossFit Nivel 2, TRX">
+                        <input type="text" name="certificaciones" id="certificaciones" maxlength="200" placeholder="Ej: NSCA, CrossFit Nivel 2, TRX">
                     </div>
                     <div class="campo2">
                         <label for="horario">Horario de Trabajo:</label>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="campo2">
                         <label for="telefono">Número de Teléfono</label>
-                        <input type="tel" placeholder="Ej: 0412-1234567" name="telefono" id="telefono" required>
+                        <input type="tel" placeholder="Ej: 0412-1234567" maxlength="11" name="telefono" id="telefono" required>
                     </div>
                     <div class="campo2">
                         <label for="foto">Foto del Instructor:</label>

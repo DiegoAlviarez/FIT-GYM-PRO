@@ -45,6 +45,7 @@ $routes->post('promociones/actualizar/(:num)', 'Panel::actualizarPromocion/$1');
 $routes->get('promociones/eliminar/(:num)', 'Panel::eliminarPromocion/$1');
 $routes->get('gestion/clases/inscritos/(:num)', 'Panel::verInscritos/$1');
 $routes->get('clases/eliminar/(:num)/(:num)', 'Panel::desvincularSocio/$1/$2');
+$routes->get('clases/nuevo', 'Panel::Clases');
 
 $routes->get('salir', 'Ingreso::salir');
 

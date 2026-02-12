@@ -11,18 +11,13 @@ class Home extends BaseController
     {
     $personaModel = new PersonaModel();
 
-    $data['totalActivos'] = $personaModel->where('estado_pago', 'activo')
-                                         ->where('rol', 'socio')
-                                         ->countAllResults();
+    $data['totalActivos'] = $personaModel->where('rol', 'socio')->countAllResults();
 
-    
-    $data['totalInstructores'] = $personaModel->where('rol', 'instructor')
-                                               ->countAllResults();
 
-    return view('index', $data); // Tu vista pública
+    $data['totalInstructores'] = $personaModel->where('rol', 'instructor')->countAllResults();
+                                               
+    return view('index', $data); 
     }
-    
-
     public function verInstalaciones(){
         return view('instalaciones');
     }

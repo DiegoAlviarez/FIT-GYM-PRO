@@ -21,7 +21,7 @@
     </div>
     <div class="contenedor">
         <div class="tarjetas"> 
-            <h3> <?= ($totalActivos ?? 0) ?>+</h3>
+            <h3> <?= ($totalActivos ?? 0) ?></h3>
             <p>Miembros Activos</p>
         </div>
         <div class="tarjetas"> 
